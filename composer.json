@@ -29,7 +29,7 @@
     "composer/installers": "*",
     "oscarotero/env": "*",
     "php": ">=8.1",
-    "roots/bedrock-autoloader": "*",
+    "roots/bedrock-autoloader": "^1.0",
     "roots/wordpress": "*",
     "roots/wp-config": "*",
     "vlucas/phpdotenv": "*",
@@ -41,7 +41,9 @@
     "wpengine/advanced-custom-fields-pro": "*",
     "ramsey/uuid": "^4.7",
     "league/glide": "^3.0",
-    "deployer/deployer": "^7.5"
+    "deployer/deployer": "^7.5",
+    "trendwerk/multisite-labels": "^1.0",
+    "koodimonni-language/core-fr_fr": "^6.7"
   },
   "config": {
     "optimize-autoloader": true,

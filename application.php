@@ -25,7 +25,14 @@ if (file_exists($root_dir . '/.env')) {
   $dotenv = Dotenv\Dotenv::create($repository, $root_dir, $env_files, false);
   $dotenv->load();
 
-  $dotenv->required(['DB_NAME', 'DB_PASSWORD', 'DB_USER', 'WP_ENV', 'WP_HOME']);
+  $dotenv->required([
+    'DB_NAME',
+    'DB_PASSWORD',
+    'DB_USER',
+    'DOMAIN_CURRENT_SITE',
+    'WP_ENV',
+    'WP_HOME',
+  ]);
 }
 
 // Define environment variable and load its config first
@@ -41,6 +48,7 @@ Config::define('WP_ENVIRONMENT_TYPE', WP_ENV);
 Config::define('WP_HOME', env('WP_HOME'));
 Config::define('WP_POST_REVISIONS', env('WP_POST_REVISIONS') ?? true);
 Config::define('WP_SITEURL', env('WP_HOME') . '/wp');
+Config::define('WP_MEMORY_LIMIT', '512M');
 
 // Content directory
 Config::define('CONTENT_DIR', '/wp-content');
@@ -65,6 +73,14 @@ Config::define('WP_DEBUG_DISPLAY', env('WP_DEBUG_DISPLAY') ?? false);
 Config::define('WP_DEBUG_LOG', env('WP_DEBUG_LOG') ?? false);
 Config::define('SCRIPT_DEBUG', env('SCRIPT_DEBUG') ?? false);
 ini_set('display_errors', '0');
+
+// Multisite
+Config::define('MULTISITE', true);
+Config::define('SUBDOMAIN_INSTALL', false);
+Config::define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE'));
+Config::define('PATH_CURRENT_SITE', '/');
+Config::define('SITE_ID_CURRENT_SITE', 1);
+Config::define('BLOG_ID_CURRENT_SITE', 1);
 
 // Theme
 Config::define('PRODUCTION_URL', env('PRODUCTION_URL'));
