@@ -23,7 +23,7 @@ h6 {
 
 h1 {
   @apply mb-4 text-3xl/snug;
-  @apply xs:text-4xl/tight xs:mb-8;
+  @apply xs:mb-8 xs:text-4xl/tight;
   @apply md:mb-10 md:text-5xl/tight;
 }
 
@@ -44,7 +44,7 @@ p {
 ol,
 ul {
   @apply mb-6 ml-6 list-decimal text-gray-600;
-  @apply marker:text-primary-600 marker:font-semibold;
+  @apply marker:font-semibold marker:text-primary-600;
 
   ol,
   ul {
@@ -61,14 +61,14 @@ li {
 }
 
 a {
-  @apply text-primary-600 hover:text-primary-800 cursor-pointer font-semibold underline underline-offset-2 transition-colors;
+  @apply cursor-pointer font-semibold text-primary-600 underline underline-offset-2 transition-colors hover:text-primary-800;
 }
 
 blockquote {
-  @apply border-primary-600 my-9 border-l-3 pl-6;
+  @apply my-9 border-l-3 border-primary-600 pl-6;
 
   :not(cite) {
-    @apply text-primary-600 mb-4 text-2xl/normal font-semibold;
+    @apply mb-4 text-2xl/normal font-semibold text-primary-600;
   }
 }
 

@@ -13,14 +13,14 @@
 @utility button {
   @apply inline-flex gap-1 rounded border-2 px-4 py-2;
   @apply cursor-pointer font-semibold no-underline;
-  @apply bg-primary-600 border-primary-600 text-white;
-  @apply hover:bg-primary-800 hover:border-primary-800 hover:text-white;
+  @apply border-primary-600 bg-primary-600 text-white;
+  @apply hover:border-primary-800 hover:bg-primary-800 hover:text-white;
 }
 
 @utility button-outline {
   @apply button;
-  @apply border-primary-600 text-primary-600 bg-transparent;
-  @apply hover:bg-primary-800 hover:border-primary-800 hover:text-white;
+  @apply border-primary-600 bg-transparent text-primary-600;
+  @apply hover:border-primary-800 hover:bg-primary-800 hover:text-white;
 }
 
 .button-chevron-right {
@@ -34,5 +34,5 @@
 @utility wrapper {
   @apply mx-auto;
   @apply px-5;
-  @apply max-w-site w-full;
+  @apply w-full max-w-site;
 }
