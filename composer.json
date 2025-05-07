@@ -50,6 +50,9 @@
       "composer/installers": true,
       "roots/wordpress-core-installer": true,
       "koodimonni/composer-dropin-installer": true
+    },
+    "platform": {
+      "php": "8.3"
     }
   },
   "minimum-stability": "dev",
