@@ -114,7 +114,7 @@ class Image
   private function resize(array $params)
   {
     // Replace image URL so it is handeled by Glide
-    $src = str_replace('/wp-content/uploads', '/uploads', $this->url);
+    $src = str_replace('/wp-content/uploads', '/img?url=', $this->url);
 
     // Add fit and format property
     $params = array_merge($params, [
@@ -124,7 +124,7 @@ class Image
 
     // Return image URL with Glide parameters
     $query = http_build_query($params);
-    return "$src?$query";
+    return "$src&$query";
   }
 
   // Handle image resizing with Glide
@@ -137,19 +137,23 @@ class Image
       return esc_attr($param);
     }, $_GET);
 
-    // Bail if this is not an image request or if 'w' parameter is not present
-    if (!str_starts_with($uri, '/uploads/') || !isset($params['w'])) {
+    // Bail if this is not an image request or if 'url' or 'w' parameter is not present
+    if (
+      !str_starts_with($uri, '/img') ||
+      !isset($params['url']) ||
+      !isset($params['w'])
+    ) {
       return;
     }
 
     // Return the resized image or 404 error page if image is not found
     try {
       $server = ServerFactory::create([
-        'source' => 'wp-content',
+        'source' => 'wp-content/uploads',
         'cache' => 'wp-content/uploads/glide-cache',
         'max_image_size' => 2400 * 2400,
       ]);
-      $server->outputImage($uri, $params);
+      $server->outputImage($params['url'], $params);
     } catch (FileNotFoundException $exception) {
       status_header(404);
       include get_query_template('404');
