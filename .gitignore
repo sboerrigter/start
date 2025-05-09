@@ -5,6 +5,7 @@
 /node_modules
 /vendor
 auth.json
+db.sql
 web/wp-content/cache/*
 web/wp-content/languages/*
 web/wp-content/mu-plugins/*
@@ -19,3 +20,4 @@ web/wp/*
 !web/wp-content/mu-plugins/bedrock-autoloader.php
 !web/wp-content/plugins/.gitkeep
 !web/wp-content/uploads/.gitkeep
+
