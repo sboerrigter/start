@@ -43,7 +43,8 @@
     "league/glide": "^3.0",
     "deployer/deployer": "^7.5",
     "trendwerk/multisite-labels": "^1.0",
-    "koodimonni-language/core-fr_fr": "^6.7"
+    "koodimonni-language/core-fr_fr": "^6.7",
+    "roots/multisite-url-fixer": "^1.1"
   },
   "config": {
     "optimize-autoloader": true,
