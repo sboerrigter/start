@@ -75,8 +75,6 @@ Config::define('SCRIPT_DEBUG', env('SCRIPT_DEBUG') ?? false);
 ini_set('display_errors', '0');
 
 // Multisite
-define('WP_ALLOW_MULTISITE', true);
-
 Config::define('MULTISITE', true);
 Config::define('SUBDOMAIN_INSTALL', false);
 Config::define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE'));
