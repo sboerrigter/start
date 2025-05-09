@@ -21,6 +21,7 @@ set('identityFile', '~/.ssh/id_rsa');
 set('addSshOption', 'UserKnownHostsFile', '/dev/null');
 set('addSshOption', 'StrictHostKeyChecking', 'no');
 set('addSshOption', 'HostBasedAuthentication', 'no');
+set('use_atomic_symlink', false);
 
 set('shared_files', ['.env', 'auth.json', 'web/wp-content/debug.log']);
 set('shared_dirs', ['web/wp-content/uploads']);
@@ -102,12 +103,11 @@ task('uploads:push', function () {
 });
 
 // Purge Varnish
-// @todo fix this
-// task('purge:varnish', function () {
-//   run(
-//     'curl -sX BAN -H "X-Ban-Method: exact" -H "X-Ban-Host: {{domain}}" http://localhost/ > /dev/null'
-//   );
-// });
+task('purge:varnish', function () {
+  run(
+    'curl -sX BAN -H "X-Ban-Method: exact" -H "X-Ban-Host: {{ alias }}" http://localhost/ > /dev/null'
+  );
+});
 
 // Hooks
 after('deploy:prepare', 'deploy:build');
