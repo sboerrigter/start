@@ -1,7 +1,7 @@
 {
   "http-basic": {
     "connect.advancedcustomfields.com": {
-      "username": "your_license_key",
+      "username": "LICENSE_KEY",
       "password": "http://www.start.test"
     }
   }
