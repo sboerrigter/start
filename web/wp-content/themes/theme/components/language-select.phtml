@@ -1,6 +1,7 @@
 <!-- prettier-ignore -->
 <?php
-$currentSiteId = get_current_site()->blog_id;
+$currentSiteId = get_current_blog_id();
+
 $sites = [
   1 => [
     'url' => get_home_url(1),
