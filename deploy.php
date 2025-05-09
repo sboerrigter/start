@@ -14,6 +14,8 @@ set('default_timeout', 3600);
 // Defaults
 set('branch', 'main');
 set('local_url', 'http://www.start.test');
+set('deploy_path', '/var/www/vhosts/TB01-004/{{alias}}/site');
+set('port', 2223);
 
 set('identityFile', '~/.ssh/id_rsa');
 set('addSshOption', 'UserKnownHostsFile', '/dev/null');
@@ -28,15 +30,13 @@ host('start.bonsjoerd.eu')
   ->set('branch', 'main')
   ->set('hostname', 'tw-server-05.twservices.eu')
   ->set('remote_user', 'start.bonsjoerd.eu')
-  ->set('remote_url', 'https://start.bonsjoerd.eu')
-  ->set('deploy_path', '/home/start/htdocs');
+  ->set('remote_url', 'https://start.bonsjoerd.eu');
 
 host('hannahservices.com')
   ->set('branch', 'hannah')
   ->set('hostname', 'tw-server-05.twservices.eu')
   ->set('remote_user', 'hannahservices.com')
-  ->set('remote_url', 'https://www.hannahservices.com')
-  ->set('deploy_path', '/home/hannah/htdocs');
+  ->set('remote_url', 'https://www.hannahservices.com');
 
 // Custom tasks
 

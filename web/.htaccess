@@ -7,11 +7,6 @@
     Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 </IfModule>
 
-# Deny direct access to PHP files
-<Files *.php>
-deny from all
-</Files>
-
 # WordPress
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
