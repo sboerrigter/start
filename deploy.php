@@ -102,14 +102,13 @@ task('uploads:push', function () {
 });
 
 // Purge Varnish
-// @todo fix this
-// task('purge:varnish', function () {
-//   run(
-//     'curl -sX BAN -H "X-Ban-Method: exact" -H "X-Ban-Host: {{domain}}" http://localhost/ > /dev/null'
-//   );
-// });
+task('purge:varnish', function () {
+  run(
+    'curl -sX BAN -H "X-Ban-Method: exact" -H "X-Ban-Host: {{domain}}" http://localhost/ > /dev/null'
+  );
+});
 
 // Hooks
 after('deploy:prepare', 'deploy:build');
-// after('deploy', 'purge:varnish');
+after('deploy', 'purge:varnish');
 after('deploy:failed', 'deploy:unlock');
