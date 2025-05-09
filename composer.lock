@@ -35,9 +35,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "description": "Arbitrary-precision arithmetic library",
       "keywords": [
         "Arbitrary-precision",
@@ -106,9 +104,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Kyle Robinson Young",
@@ -237,14 +233,10 @@
         "phpunit/php-code-coverage": "^11.0",
         "phpunit/phpunit": "^11.4"
       },
-      "bin": [
-        "bin/dep"
-      ],
+      "bin": ["bin/dep"],
       "type": "library",
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Anton Medvedev",
@@ -294,9 +286,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Graham Campbell",
@@ -358,9 +348,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Oliver Vogel",
@@ -370,12 +358,7 @@
       ],
       "description": "Native PHP GIF Encoder/Decoder",
       "homepage": "https://github.com/intervention/gif",
-      "keywords": [
-        "animation",
-        "gd",
-        "gif",
-        "image"
-      ],
+      "keywords": ["animation", "gd", "gif", "image"],
       "support": {
         "issues": "https://github.com/Intervention/gif/issues",
         "source": "https://github.com/Intervention/gif/tree/4.2.1"
@@ -432,9 +415,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Oliver Vogel",
@@ -503,12 +484,7 @@
       },
       "type": "wordpress-language",
       "description": "WordPress core translations for Dutch - nl_nl",
-      "keywords": [
-        "Translation",
-        "WordPress",
-        "core",
-        "nl_nl"
-      ]
+      "keywords": ["Translation", "WordPress", "core", "nl_nl"]
     },
     {
       "name": "koodimonni/composer-dropin-installer",
@@ -541,9 +517,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "WTFPL"
-      ],
+      "license": ["WTFPL"],
       "authors": [
         {
           "name": "Onni Hakala",
@@ -612,9 +586,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Frank de Jonge",
@@ -668,9 +640,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Frank de Jonge",
@@ -678,13 +648,7 @@
         }
       ],
       "description": "Local filesystem adapter for Flysystem.",
-      "keywords": [
-        "Flysystem",
-        "file",
-        "files",
-        "filesystem",
-        "local"
-      ],
+      "keywords": ["Flysystem", "file", "files", "filesystem", "local"],
       "support": {
         "source": "https://github.com/thephpleague/flysystem-local/tree/3.29.0"
       },
@@ -723,9 +687,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Jonathan Reinink",
@@ -786,9 +748,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Frank de Jonge",
@@ -836,17 +796,13 @@
       },
       "type": "library",
       "autoload": {
-        "files": [
-          "src/env_function.php"
-        ],
+        "files": ["src/env_function.php"],
         "psr-4": {
           "Env\\": "src/"
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Oscar Otero",
@@ -857,9 +813,7 @@
       ],
       "description": "Simple library to consume environment variables",
       "homepage": "https://github.com/oscarotero/env",
-      "keywords": [
-        "env"
-      ],
+      "keywords": ["env"],
       "support": {
         "email": "oom@oscarotero.com",
         "issues": "https://github.com/oscarotero/env/issues",
@@ -904,9 +858,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "Apache-2.0"
-      ],
+      "license": ["Apache-2.0"],
       "authors": [
         {
           "name": "Johannes M. Schmitt",
@@ -920,12 +872,7 @@
         }
       ],
       "description": "Option Type for PHP",
-      "keywords": [
-        "language",
-        "option",
-        "php",
-        "type"
-      ],
+      "keywords": ["language", "option", "php", "type"],
       "support": {
         "issues": "https://github.com/schmittjoh/php-option/issues",
         "source": "https://github.com/schmittjoh/php-option/tree/1.9.3"
@@ -971,9 +918,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "PHP-FIG",
@@ -1046,9 +991,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Ben Ramsey",
@@ -1057,14 +1000,7 @@
         }
       ],
       "description": "A PHP library for representing and manipulating collections.",
-      "keywords": [
-        "array",
-        "collection",
-        "hash",
-        "map",
-        "queue",
-        "set"
-      ],
+      "keywords": ["array", "collection", "hash", "map", "queue", "set"],
       "support": {
         "issues": "https://github.com/ramsey/collection/issues",
         "source": "https://github.com/ramsey/collection/tree/2.1.0"
@@ -1130,23 +1066,15 @@
         }
       },
       "autoload": {
-        "files": [
-          "src/functions.php"
-        ],
+        "files": ["src/functions.php"],
         "psr-4": {
           "Ramsey\\Uuid\\": "src/"
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "description": "A PHP library for generating and working with universally unique identifiers (UUIDs).",
-      "keywords": [
-        "guid",
-        "identifier",
-        "uuid"
-      ],
+      "keywords": ["guid", "identifier", "uuid"],
       "support": {
         "issues": "https://github.com/ramsey/uuid/issues",
         "source": "https://github.com/ramsey/uuid/tree/4.7.6"
@@ -1191,9 +1119,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Nick Fox",
@@ -1257,17 +1183,10 @@
       },
       "type": "metapackage",
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT",
-        "GPL-2.0-or-later"
-      ],
+      "license": ["MIT", "GPL-2.0-or-later"],
       "description": "WordPress is open source software you can use to create a beautiful website, blog, or app.",
       "homepage": "https://wordpress.org/",
-      "keywords": [
-        "blog",
-        "cms",
-        "wordpress"
-      ],
+      "keywords": ["blog", "cms", "wordpress"],
       "support": {
         "issues": "https://github.com/roots/wordpress/issues",
         "source": "https://github.com/roots/wordpress/tree/6.7.2"
@@ -1318,9 +1237,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "GPL-2.0-or-later"
-      ],
+      "license": ["GPL-2.0-or-later"],
       "authors": [
         {
           "name": "John P. Bloch",
@@ -1332,9 +1249,7 @@
         }
       ],
       "description": "A custom installer to handle deploying WordPress with composer",
-      "keywords": [
-        "wordpress"
-      ],
+      "keywords": ["wordpress"],
       "support": {
         "issues": "https://github.com/roots/wordpress-core-installer/issues",
         "source": "https://github.com/roots/wordpress-core-installer/tree/master"
@@ -1388,9 +1303,7 @@
       },
       "type": "wordpress-core",
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "GPL-2.0-or-later"
-      ],
+      "license": ["GPL-2.0-or-later"],
       "authors": [
         {
           "name": "WordPress Community",
@@ -1399,11 +1312,7 @@
       ],
       "description": "WordPress is open source software you can use to create a beautiful website, blog, or app.",
       "homepage": "https://wordpress.org/",
-      "keywords": [
-        "blog",
-        "cms",
-        "wordpress"
-      ],
+      "keywords": ["blog", "cms", "wordpress"],
       "support": {
         "docs": "https://developer.wordpress.org/",
         "forum": "https://wordpress.org/support/",
@@ -1451,9 +1360,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Austin Pray",
@@ -1498,17 +1405,13 @@
         }
       },
       "autoload": {
-        "files": [
-          "bootstrap.php"
-        ],
+        "files": ["bootstrap.php"],
         "psr-4": {
           "Symfony\\Polyfill\\Ctype\\": ""
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Gert de Pagter",
@@ -1521,12 +1424,7 @@
       ],
       "description": "Symfony polyfill for ctype functions",
       "homepage": "https://symfony.com",
-      "keywords": [
-        "compatibility",
-        "ctype",
-        "polyfill",
-        "portable"
-      ],
+      "keywords": ["compatibility", "ctype", "polyfill", "portable"],
       "support": {
         "source": "https://github.com/symfony/polyfill-ctype/tree/v1.31.0"
       },
@@ -1577,17 +1475,13 @@
         }
       },
       "autoload": {
-        "files": [
-          "bootstrap.php"
-        ],
+        "files": ["bootstrap.php"],
         "psr-4": {
           "Symfony\\Polyfill\\Mbstring\\": ""
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Nicolas Grekas",
@@ -1600,13 +1494,7 @@
       ],
       "description": "Symfony polyfill for the Mbstring extension",
       "homepage": "https://symfony.com",
-      "keywords": [
-        "compatibility",
-        "mbstring",
-        "polyfill",
-        "portable",
-        "shim"
-      ],
+      "keywords": ["compatibility", "mbstring", "polyfill", "portable", "shim"],
       "support": {
         "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.31.0"
       },
@@ -1651,20 +1539,14 @@
         }
       },
       "autoload": {
-        "files": [
-          "bootstrap.php"
-        ],
+        "files": ["bootstrap.php"],
         "psr-4": {
           "Symfony\\Polyfill\\Php80\\": ""
         },
-        "classmap": [
-          "Resources/stubs"
-        ]
+        "classmap": ["Resources/stubs"]
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
+      "license": ["MIT"],
       "authors": [
         {
           "name": "Ion Bazan",
@@ -1681,12 +1563,7 @@
       ],
       "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
       "homepage": "https://symfony.com",
-      "keywords": [
-        "compatibility",
-        "polyfill",
-        "portable",
-        "shim"
-      ],
+      "keywords": ["compatibility", "polyfill", "portable", "shim"],
       "support": {
         "source": "https://github.com/symfony/polyfill-php80/tree/v1.31.0"
       },
@@ -1789,9 +1666,7 @@
         }
       },
       "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "BSD-3-Clause"
-      ],
+      "license": ["BSD-3-Clause"],
       "authors": [
         {
           "name": "Graham Campbell",
@@ -1805,11 +1680,7 @@
         }
       ],
       "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
-      "keywords": [
-        "dotenv",
-        "env",
-        "environment"
-      ],
+      "keywords": ["dotenv", "env", "environment"],
       "support": {
         "issues": "https://github.com/vlucas/phpdotenv/issues",
         "source": "https://github.com/vlucas/phpdotenv/tree/v5.6.1"
