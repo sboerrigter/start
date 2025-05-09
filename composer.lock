@@ -1963,13 +1963,13 @@
   "packages-dev": [],
   "aliases": [],
   "minimum-stability": "dev",
-  "stability-flags": [],
+  "stability-flags": {},
   "prefer-stable": true,
   "prefer-lowest": false,
   "platform": {
     "php": ">=8.1"
   },
-  "platform-dev": [],
+  "platform-dev": {},
   "platform-overrides": {
     "php": "8.3"
   },

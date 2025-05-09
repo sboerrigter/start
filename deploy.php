@@ -26,15 +26,15 @@ set('shared_dirs', ['web/wp-content/uploads']);
 // Hosts
 host('start.bonsjoerd.eu')
   ->set('branch', 'main')
-  ->set('hostname', 'server01.bonsjoerd.eu')
-  ->set('remote_user', 'start')
+  ->set('hostname', 'tw-server-05.twservices.eu')
+  ->set('remote_user', 'start.bonsjoerd.eu')
   ->set('remote_url', 'https://start.bonsjoerd.eu')
   ->set('deploy_path', '/home/start/htdocs');
 
 host('hannahservices.com')
   ->set('branch', 'hannah')
-  ->set('hostname', 'server01.bonsjoerd.eu')
-  ->set('remote_user', 'hannah')
+  ->set('hostname', 'tw-server-05.twservices.eu')
+  ->set('remote_user', 'hannahservices.com')
   ->set('remote_url', 'https://www.hannahservices.com')
   ->set('deploy_path', '/home/hannah/htdocs');
 
