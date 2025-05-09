@@ -1,0 +1,72 @@
+<!-- prettier-ignore -->
+<?php
+$currentSiteId = get_current_site()->blog_id;
+$sites = [
+  1 => [
+    'url' => get_home_url(1),
+    'label' => 'English',
+  ],
+  2 => [
+    'url' => get_home_url(2),
+    'label' => 'Français',
+  ],
+  3 => [
+    'url' => get_home_url(3),
+    'label' => 'Nederlands',
+  ],
+];
+?>
+
+<div
+  class="flex items-center p-3 pr-0 text-white/75 no-underline relative group max-lg:w-full lg:px-4 lg:py-3 lg:pr-0 lg:text-gray-500"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    class="mr-2"
+  >
+    <circle
+      cx="12"
+      cy="12"
+      r="10"
+    />
+    <line
+      x1="2"
+      y1="12"
+      x2="22"
+      y2="12"
+    />
+    <path
+      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+    />
+  </svg>
+
+  <div class="">
+    <?= $sites[$currentSiteId]['label']; ?>
+  </div>
+
+  <svg class="ml-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+
+  <div class="
+    hidden group-hover:flex flex-col absolute top-12 left-0 shadow-md bg-gray-900  rounded-lg  min-w-40
+
+    lg:left-auto lg:right-0 lg:text-right
+  ">
+    <?php foreach ($sites as $siteId => $site) { ?>
+      <?php if ($siteId == $currentSiteId) continue; ?>
+
+      <a
+        class="px-5 py-1 first:pt-4 last:pb-4 font-normal no-underline text-white/75 hover:text-white"
+        href="<?= $site['url']; ?>"
+        <?= $site['current'] ? 'aria-current="page"' : ''; ?>
+      >
+        <?= $site['label']; ?>
+      </a>
+    <?php } ?>
+  </div>
+</div>
