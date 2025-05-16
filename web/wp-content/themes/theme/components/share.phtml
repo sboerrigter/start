@@ -4,26 +4,31 @@ $url = urlencode(get_the_permalink());
 $title = urlencode(get_the_title());
 
 $buttons = [
-    [
-        'title' => 'Stuur dit artikel per e-mail',
-        'href' => "mailto:?subject={$title}&amp;body={$url}",
-        'icon' => 'mail',
-    ],
-    [
-        'title' => 'Deel dit artikel op LinkedIn',
-        'href' => "https://www.linkedin.com/shareArticle?url={$url}",
-        'icon' => 'linkedin',
-    ],
-    [
-        'title' => 'Deel dit artikel op Facebook',
-        'href' => "https://www.facebook.com/sharer.php?u={$url}",
-        'icon' => 'facebook',
-    ],
-    [
-      'title' => 'Deel dit artikel op X',
-      'href' => "https://x.com/intent/post?url={$url}&amp;text={$title}",
-      'icon' => 'x-social',
-    ],
+  [
+    'title' => __('Stuur dit artikel per e-mail', 'theme'),
+    'href' => "mailto:?subject={$title}&amp;body={$url}",
+    'icon' => 'mail',
+  ],
+  [
+    'title' => __('Deel dit artikel via WhatsApp', 'theme'),
+    'href' => "mailto:?subject={$title}&amp;body={$url}",
+    'icon' => 'whatsapp',
+  ],
+  [
+    'title' => __('Deel dit artikel op LinkedIn', 'theme'),
+    'href' => "https://www.linkedin.com/shareArticle?url={$url}",
+    'icon' => 'linkedin',
+  ],
+  [
+    'title' => __('Deel dit artikel op Facebook', 'theme'),
+    'href' => "https://www.facebook.com/sharer.php?u={$url}",
+    'icon' => 'facebook',
+  ],
+  [
+    'title' => __('Deel dit artikel op X', 'theme'),
+    'href' => "https://x.com/intent/post?url={$url}&amp;text={$title}",
+    'icon' => 'x-social',
+  ],
 ];
 ?>
 
