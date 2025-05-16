@@ -4,13 +4,17 @@ $terms = get_the_terms($post, 'post_tag');
 if (!$terms) {
   return;
 }
-
-$terms = implode(', ', array_map(function ($term) {
-  $link = get_term_link($term);
-  return "<a class='text-gray-800 no-underline hover:text-primary-600 hover:underline' href='{$link}'>{$term->name}</a>";
-}, $terms));
 ?>
 
-<p>
-  <?= __('Tags', 'theme'); ?>: <?= $terms; ?>
-</p>
+<p class="mb-2 font-bold text-gray-800"><?= __('Tags', 'theme'); ?></p>
+
+<div class="mb-6 flex flex-wrap gap-2">
+  <?php foreach ($terms as $term) { ?>
+  <a
+    class="rounded bg-gray-100 px-3 py-1 text-gray-800 no-underline hover:bg-primary-600 hover:text-white"
+    href="<?= get_term_link($term); ?>"
+  >
+    <?= $term->name; ?>
+  </a>
+  <?php } ?>
+</div>
