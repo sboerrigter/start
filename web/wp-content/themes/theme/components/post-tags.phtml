@@ -7,10 +7,10 @@ if (!$terms) {
 
 $terms = implode(', ', array_map(function ($term) {
   $link = get_term_link($term);
-  return "<a class='text-gray-800 hover:text-primary-500' href='{$link}'>{$term->name}</a>";
+  return "<a class='text-gray-800 no-underline hover:text-primary-600 hover:underline' href='{$link}'>{$term->name}</a>";
 }, $terms));
 ?>
 
-<p class="mb-6 text-gray-500 md:mb-12">
+<p>
   <?= __('Tags', 'theme'); ?>: <?= $terms; ?>
 </p>

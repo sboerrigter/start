@@ -3,22 +3,25 @@ $meta = [];
 
 
 // Author
-if ($author !== false) {
+if (!isset($author) || $author !== false) {
   $label = __('By', 'theme');
   $name = get_the_author();
   $link = get_author_posts_url(get_the_author_meta('ID'));
-  $meta[] = "$label <a class='text-gray-800 no-underline hover:text-primary-500 hover:underline' href='{$link}'>{$name}</a>";
+  $meta[] = "$label <a class='text-gray-800 no-underline hover:text-primary-600 hover:underline' href='{$link}'>{$name}</a>";
 }
 
 // Post date
 $meta[] = get_the_date();
 
 // Categories
-if ($categories !== false && $categories = get_the_terms($post, 'category')) {
+if (
+  (!isset($categories) ||$categories !== false) &&
+  $categories = get_the_terms($post, 'category')
+) {
   $label = count($categories) == 1 ? __('category', 'theme') : __('categories', 'theme');
   $categories = array_map(function ($term) {
     $link = get_term_link($term);
-    return "<a class='text-gray-800 no-underline hover:text-primary-500 hover:underline' href='{$link}'>{$term->name}</a>";
+    return "<a class='text-gray-800 no-underline hover:text-primary-600 hover:underline' href='{$link}'>{$term->name}</a>";
   }, $categories);
   $categories = implode(', ', $categories);
 
@@ -26,6 +29,6 @@ if ($categories !== false && $categories = get_the_terms($post, 'category')) {
 }
 ?>
 
-<p class="mb-6 text-gray-500 md:mb-12">
+<p class="mb-6 md:mb-12">
   <?= implode(', ', $meta); ?>
 </p>

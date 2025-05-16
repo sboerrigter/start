@@ -1,1 +1,46 @@
-[share]
+<!-- prettier-ignore -->
+<?php
+$url = urlencode(get_the_permalink());
+$title = urlencode(get_the_title());
+
+$buttons = [
+    [
+        'href' => "mailto:?subject={$title}&amp;body={$url}",
+        'icon' => 'mail',
+        'title' => 'Stuur dit artikel per e-mail',
+    ],
+    [
+        'href' => "https://www.linkedin.com/shareArticle?url={$url}",
+        'icon' => 'linkedin',
+        'title' => 'Deel dit artikel op LinkedIn',
+    ],
+    [
+        'href' => "https://www.facebook.com/sharer.php?u={$url}",
+        'icon' => 'facebook',
+        'title' => 'Deel dit artikel op Facebook',
+    ],
+    [
+        'href' => "https://x.com/intent/post?url={$url}&amp;text={$title}",
+        'icon' => 'x-social',
+        'title' => 'Deel dit artikel op X',
+    ],
+];
+?>
+
+<div>
+  <p class="mb-2 font-bold text-gray-800">
+    <?= __('Share this article', 'theme'); ?>
+  </p>
+
+  <span class="flex flex-wrap gap-1.5">
+    <?php foreach ($buttons as $button) { ?>
+    <a
+      class="rounded border-2 border-gray-600 p-2 text-gray-600 hover:border-primary-600 hover:bg-primary-600 hover:text-white"
+      href="<?= $button['href']; ?>"
+      title="<?= $button['title']; ?>"
+    >
+      <?= component('svg/' . $button['icon'], [ 'class' => 'w-5 h-5' ]); ?>
+    </a>
+    <?php } ?>
+  </span>
+</div>
