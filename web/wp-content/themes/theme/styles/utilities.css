@@ -35,6 +35,10 @@
   @apply hover:border-gray-800 hover:bg-gray-800;
 }
 
+.button-chevron-left {
+  @apply rotate-180 transition-transform group-hover:-translate-x-1;
+}
+
 .button-chevron-right {
   @apply transition-transform group-hover:translate-x-1;
 }

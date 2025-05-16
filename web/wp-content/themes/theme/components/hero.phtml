@@ -1,6 +1,12 @@
+<?php
+if ($image !== false && !$image) {
+  $image = get_field('_thumbnail_id');
+}
+?>
+
 <header class="wrapper">
   <!-- prettier-ignore -->
-  <?php if ($image !== false && $image = get_field('_thumbnail_id')) { ?>
+  <?php if ($image !== false) { ?>
     <?= component('image', [
       'class' => implode(' ', [
         'rounded-lg object-cover',

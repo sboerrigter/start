@@ -23,10 +23,10 @@ A list of things I want to get done before building my first website with this p
 
 - [x] 404 error page
 - [ ] Posts overview
-- [ ] Post detail page
-- [ ] Post meta
-- [ ] Post tags
-- [ ] Share buttons
+- [x] Post detail page
+- [x] Post meta
+- [x] Post tags
+- [x] Share buttons
 - [ ] Related posts
 
 # Menu bugs

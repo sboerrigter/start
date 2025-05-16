@@ -1,0 +1,36 @@
+<!-- prettier-ignore -->
+<?php
+global $wp_query;
+
+$currentPage = get_query_var('paged') ?: 1;
+$previousPage = ($currentPage > 1) ? get_previous_posts_page_link() : null;
+$nextPage = ($currentPage < $wp_query->max_num_pages) ? get_next_posts_page_link() : null;
+
+if (!$previousPage & !$nextPage) {
+    return null;
+}
+?>
+
+<div class="mt-10 flex w-full flex-wrap justify-between md:mt-15">
+  <!-- prettier-ignore -->
+  <?php if ($previousPage) { ?>
+    <?= component('button', [
+      'title' => __('Previous page', 'theme'),
+      'iconBefore' => component('svg/chevron-right', [
+        'class' => 'button-chevron-left',
+      ]),
+      'iconAfter' => false,
+      'url' => $previousPage,
+    ]) ?>
+  <?php } ?>
+
+  <!-- prettier-ignore -->
+  <?php if ($nextPage) { ?>
+    <?= component('button', [
+      'class' => 'ml-auto',
+      'title' => __('Next page', 'theme'),
+      'hideArrow' => true,
+      'url' => $nextPage,
+    ]) ?>
+  <?php } ?>
+</div>
