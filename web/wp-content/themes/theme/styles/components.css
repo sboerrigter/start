@@ -40,6 +40,13 @@
   }
 }
 
+/* Content */
+.content {
+  @apply wrapper;
+  @apply mt-10 mb-15 max-w-content;
+  @apply md:mt-20 md:mb-25;
+}
+
 /* Block: Audio */
 .wp-block-audio {
   @apply my-9;

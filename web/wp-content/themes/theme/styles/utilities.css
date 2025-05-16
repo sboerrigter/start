@@ -23,6 +23,10 @@
   @apply hover:border-primary-800 hover:bg-primary-800 hover:text-white;
 }
 
+.button-chevron-left {
+  @apply rotate-180 transition-transform group-hover:-translate-x-1;
+}
+
 .button-chevron-right {
   @apply transition-transform group-hover:translate-x-1;
 }

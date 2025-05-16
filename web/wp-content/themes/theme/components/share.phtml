@@ -1,0 +1,51 @@
+<!-- prettier-ignore -->
+<?php
+$url = urlencode(get_the_permalink());
+$title = urlencode(get_the_title());
+
+$buttons = [
+  [
+    'title' => __('Stuur dit artikel per e-mail', 'theme'),
+    'href' => "mailto:?subject={$title}&amp;body={$url}",
+    'icon' => 'mail',
+  ],
+  [
+    'title' => __('Deel dit artikel via WhatsApp', 'theme'),
+    'href' => "https://wa.me?text={$title}%20-%20{$url}",
+    'icon' => 'whatsapp',
+  ],
+  [
+    'title' => __('Deel dit artikel op LinkedIn', 'theme'),
+    'href' => "https://www.linkedin.com/shareArticle?url={$url}",
+    'icon' => 'linkedin',
+  ],
+  [
+    'title' => __('Deel dit artikel op Facebook', 'theme'),
+    'href' => "https://www.facebook.com/sharer.php?u={$url}",
+    'icon' => 'facebook',
+  ],
+  [
+    'title' => __('Deel dit artikel op X', 'theme'),
+    'href' => "https://x.com/intent/post?url={$url}&amp;text={$title}",
+    'icon' => 'x-social',
+  ],
+];
+?>
+
+<div>
+  <p class="mb-2 font-bold text-gray-800">
+    <?= __('Share this article', 'theme'); ?>
+  </p>
+
+  <div class="flex flex-wrap gap-1.5">
+    <?php foreach ($buttons as $button) { ?>
+    <a
+      class="rounded border border-gray-300 p-2 text-gray-600 hover:border-primary-600 hover:bg-primary-600 hover:text-white"
+      href="<?= $button['href']; ?>"
+      title="<?= $button['title']; ?>"
+    >
+      <?= component('svg/' . $button['icon'], [ 'class' => 'w-5 h-5' ]); ?>
+    </a>
+    <?php } ?>
+  </div>
+</div>

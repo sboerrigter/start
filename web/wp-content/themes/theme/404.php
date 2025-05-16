@@ -1,21 +1,24 @@
-<?php
-$text = __(
-  'Unfortunately, this page does not exist. You can go to the homepage, or use the menu above to navigate to other pages.',
-  'theme'
-);
-$button = component('button', [
-  'title' => __('To the homepage', 'theme'),
-  'url' => home_url(),
-]);
-$content = "<p>{$text}</p> {$button}";
-?>
-
 <?= component('head') ?>
 <?= component('header') ?>
 <?= component('hero') ?>
-<?= component('content', [
-  'title' => __('Page not found', 'theme'),
-  'content' => $content,
-]) ?>
+
+<section>
+  <div class="content">
+    <h1><?= __('Page not found', 'theme') ?></h1>
+
+    <p>
+      <?= __(
+        'Unfortunately, this page does not exist. You can go to the homepage, or use the menu above to navigate to other pages.',
+        'theme'
+      ) ?>
+    </p>
+
+    <?= component('button', [
+      'title' => __('To the homepage', 'theme'),
+      'url' => home_url(),
+    ]) ?>
+  </div>
+</section>
+
 <?= component('cta') ?>
 <?= component('footer') ?>
