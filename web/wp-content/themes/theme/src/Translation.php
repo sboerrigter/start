@@ -6,7 +6,7 @@ class Translation
 {
   public static function init()
   {
-    add_action('init', [static::class, 'loadTextdomain']);
+    add_action('after_setup_theme', [static::class, 'loadTextdomain']);
   }
 
   public static function loadTextdomain()
