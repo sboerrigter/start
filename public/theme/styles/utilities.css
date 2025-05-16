@@ -1,0 +1,50 @@
+.alignleft {
+  @apply mx-auto sm:float-left sm:my-2 sm:mr-9;
+}
+
+.aligncenter {
+  @apply mx-auto;
+}
+
+.alignright {
+  @apply mx-auto sm:float-right sm:my-2 sm:ml-9;
+}
+
+@utility button {
+  @apply inline-flex gap-1 rounded border-2 px-4 py-2;
+  @apply cursor-pointer font-semibold no-underline;
+  @apply border-primary-600 bg-primary-600 text-white;
+  @apply hover:border-primary-800 hover:bg-primary-800 hover:text-white;
+}
+
+@utility button-outline {
+  @apply button;
+  @apply border-primary-600 bg-transparent text-primary-600;
+  @apply hover:border-primary-800 hover:bg-primary-800 hover:text-white;
+}
+
+@utility button-gray {
+  @apply button;
+  @apply border-gray-600 bg-gray-600 text-white;
+  @apply hover:border-gray-800 hover:bg-gray-800;
+}
+
+@utility button-gray-outline {
+  @apply button;
+  @apply border-gray-600 bg-transparent text-gray-600;
+  @apply hover:border-gray-800 hover:bg-gray-800;
+}
+
+.button-chevron-right {
+  @apply transition-transform group-hover:translate-x-1;
+}
+
+@utility center {
+  @apply flex items-center justify-center;
+}
+
+@utility wrapper {
+  @apply mx-auto;
+  @apply px-5;
+  @apply w-full max-w-site;
+}

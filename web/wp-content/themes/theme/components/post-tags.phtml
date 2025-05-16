@@ -1,0 +1,16 @@
+<?php
+$terms = get_the_terms($post, 'post_tag');
+
+if (!$terms) {
+  return;
+}
+
+$terms = implode(', ', array_map(function ($term) {
+  $link = get_term_link($term);
+  return "<a class='text-gray-800 hover:text-primary-500' href='{$link}'>{$term->name}</a>";
+}, $terms));
+?>
+
+<p class="mb-6 text-gray-500 md:mb-12">
+  <?= __('Tags', 'theme'); ?>: <?= $terms; ?>
+</p>

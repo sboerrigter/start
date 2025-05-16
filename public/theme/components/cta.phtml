@@ -1,0 +1,32 @@
+<footer class="wrapper">
+  <?php if (get_field('show_cta')) { ?>
+
+  <!-- prettier-ignore -->
+  <?php
+  $title = get_field('cta_title') ?: get_field('cta_title', 'option');
+  $text = get_field('cta_text') ?: get_field('cta_text', 'option');
+  $buttons = get_field('cta_buttons') ?: get_field('cta_buttons', 'option');
+ ; ?>
+
+  <div class="rounded-lg bg-primary-50 px-5 py-10 md:py-15">
+    <div
+      class="mx-auto flex w-full max-w-[720px] flex-col items-center text-center"
+    >
+      <h2><?= $title; ?></h2>
+
+      <!-- prettier-ignore -->
+      <?= get_field('cta_text', 'option'); ?>
+
+      <?= component('buttons', [
+        'buttons' => $buttons,
+        'class' => 'justify-center',
+      ]); ?>
+    </div>
+  </div>
+
+  <?php } else { ?>
+
+  <hr />
+
+  <?php } ?>
+</footer>

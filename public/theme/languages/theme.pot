@@ -1,0 +1,145 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom theme\n"
+"POT-Creation-Date: 2025-04-07 15:10+0200\n"
+"PO-Revision-Date: 2025-03-28 11:32+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: src/Menu.php:14
+msgid "Main menu"
+msgstr ""
+
+#: src/Menu.php:15
+msgid "Footer menu"
+msgstr ""
+
+#: src/Plugins/Acf/GeneralContent.php:20
+msgid "General content"
+msgstr ""
+
+#: src/Plugins/Acf/GeneralContent.php:32
+msgid "General"
+msgstr ""
+
+#: src/PostTypes/Page.php:17
+msgid "Pages"
+msgstr ""
+
+#: src/PostTypes/Page.php:18
+msgid "Page"
+msgstr ""
+
+#: src/PostTypes/Page.php:31 src/PostTypes/Post.php:31
+msgid "settings"
+msgstr ""
+
+#: src/PostTypes/Post.php:17
+msgid "Posts"
+msgstr ""
+
+#: src/PostTypes/Post.php:18
+msgid "Post"
+msgstr ""
+
+#: src/Traits/HasFields.php:15
+msgid "Header"
+msgstr ""
+
+#: src/Traits/HasFields.php:22
+msgid "Image"
+msgstr ""
+
+#: src/Traits/HasFields.php:38
+msgid "Call to action"
+msgstr ""
+
+#: src/Traits/HasFields.php:46
+msgid "Show component"
+msgstr ""
+
+#: src/Traits/HasFields.php:48
+msgid "Show \"Call to action\" component on this page"
+msgstr ""
+
+#: src/Traits/HasFields.php:57
+msgid "Title"
+msgstr ""
+
+#: src/Traits/HasFields.php:76
+msgid "Text"
+msgstr ""
+
+#: src/Traits/HasFields.php:122
+msgid "Buttons"
+msgstr ""
+
+#: src/Traits/HasFields.php:125
+msgid "+ Add button"
+msgstr ""
+
+#: src/Traits/HasFields.php:130
+msgid "Button"
+msgstr ""
+
+#: src/Traits/HasFields.php:137
+msgid "Style"
+msgstr ""
+
+#: src/Traits/HasFields.php:140
+msgid "Blue"
+msgstr ""
+
+#: src/Traits/HasFields.php:141
+msgid "Blue outline"
+msgstr ""
+
+#: src/Traits/HasFields.php:142
+msgid "Gray"
+msgstr ""
+
+#: src/Traits/HasFields.php:143
+msgid "Gray outline"
+msgstr ""
+
+#: src/Traits/HasFields.php:161
+#, php-format
+msgid "Overwrites the default value in %s settings."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Theme"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://github.com/sboerrigter/start"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Custom WordPress theme, built with <a href=\"https://github.com/sboerrigter/"
+"start\">Start</a>."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Sjoerd Boerrigter"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.bonsjoerd.eu"
+msgstr ""

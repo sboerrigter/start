@@ -1,0 +1,110 @@
+body {
+  @apply bg-white text-gray-800;
+  @apply font-[Inter] leading-normal antialiased;
+  @apply accent-primary-600;
+}
+
+* {
+  @apply border-gray-200;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply leading-normal font-extrabold;
+  @apply mb-2 text-lg/normal;
+
+  strong {
+    @apply font-extrabold;
+  }
+}
+
+h1 {
+  @apply mb-4 text-3xl/snug;
+  @apply xs:mb-8 xs:text-4xl/tight;
+  @apply md:mb-10 md:text-5xl/tight;
+}
+
+h2 {
+  @apply mb-3 text-2xl/normal;
+  @apply md:mb-4 md:text-3xl/snug;
+}
+
+h3 {
+  @apply mb-2 text-xl;
+  @apply md:mb-3 md:text-2xl/normal;
+}
+
+p {
+  @apply mb-6 text-base/normal text-gray-600;
+}
+
+ol,
+ul {
+  @apply mb-6 ml-6 list-decimal text-gray-600;
+  @apply marker:font-semibold marker:text-primary-600;
+
+  ol,
+  ul {
+    @apply mb-0;
+  }
+}
+
+ul {
+  @apply list-disc;
+}
+
+li {
+  @apply my-2;
+}
+
+a {
+  @apply cursor-pointer font-semibold text-primary-600 underline underline-offset-2 transition-colors hover:text-primary-800;
+}
+
+blockquote {
+  @apply my-9 border-l-3 border-primary-600 pl-6;
+
+  :not(cite) {
+    @apply mb-4 text-2xl/normal font-semibold text-primary-600;
+  }
+}
+
+cite {
+  @apply font-bold not-italic;
+}
+
+strong {
+  @apply font-semibold text-gray-800;
+}
+
+::selection {
+  @apply bg-primary-600 text-white;
+}
+
+hr {
+  @apply border-t;
+}
+
+img {
+  @apply max-w-full;
+}
+
+figcaption {
+  @apply text-sm text-gray-400;
+}
+
+iframe {
+  @apply w-full;
+}
+
+table {
+  @apply text-left;
+}
+
+th,
+td {
+  @apply align-top;
+}

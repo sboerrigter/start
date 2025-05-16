@@ -4,7 +4,8 @@
 
 <section>
   <div class="content">
-    [@todo]
+    <h1><?= get_the_title() ?></h1>
+    <?= get_the_content() ?>
   </div>
 </section>
 

@@ -1,0 +1,11 @@
+{
+  "web/wp-content/themes/theme/scripts/theme.js": {
+    "file": "theme-BUaIe8CY.js",
+    "name": "theme",
+    "src": "web/wp-content/themes/theme/scripts/theme.js",
+    "isEntry": true,
+    "css": [
+      "theme-W-gtPgSC.css"
+    ]
+  }
+}
