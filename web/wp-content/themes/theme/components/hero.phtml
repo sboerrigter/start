@@ -6,7 +6,7 @@ if ($image !== false && !$image) {
 
 <header class="wrapper">
   <!-- prettier-ignore -->
-  <?php if ($image !== false) { ?>
+  <?php if ($image && $image !== false) { ?>
     <?= component('image', [
       'class' => implode(' ', [
         'rounded-lg object-cover',
