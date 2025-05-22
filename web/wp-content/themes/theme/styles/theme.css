@@ -7,6 +7,8 @@
 
 @import 'tailwindcss/utilities.css';
 
+@custom-variant hover (&:hover);
+
 @theme {
   --breakpoint-2xs: 375px;
   --breakpoint-xs: 480px;
