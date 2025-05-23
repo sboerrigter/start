@@ -22,7 +22,7 @@ A list of things I want to get done before building my first website with this p
 ## Pages and components
 
 - [x] 404 error page
-- [ ] Posts overview
+- [x] Posts overview
 - [x] Post detail page
 - [x] Post meta
 - [x] Post tags
@@ -39,7 +39,7 @@ A list of things I want to get done before building my first website with this p
 ## Devops
 
 - [x] Install and configure Deployer
-- [ ] Configure automatic deployment via Github actions
+- [x] Configure automatic deployment via Github actions
 - [x] Choose a hosting provider (with SSL support and automatic backups)
 - [x] Maybe use a server management tool like ~~Forge, Runcloud, Servepilot or Ploi?~~ Cloudpanel
 - [x] Deploy to a production environent
