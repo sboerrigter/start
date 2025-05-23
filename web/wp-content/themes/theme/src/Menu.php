@@ -4,15 +4,26 @@ namespace Theme;
 
 class Menu
 {
+  private static $currentUrl;
+
   public static function init()
   {
     add_action('after_setup_theme', [static::class, 'register']);
+    add_action('wp', [static::class, 'setCurrentUrl']);
   }
 
+  // Register menu's
   public static function register()
   {
     register_nav_menu('main', __('Main menu'));
     register_nav_menu('footer', __('Footer menu'));
+  }
+
+  // Set current URL so we can determine the current and parent menu pages
+  public static function setCurrentUrl()
+  {
+    global $wp;
+    static::$currentUrl = trailingslashit(home_url($wp->request));
   }
 
   // Get menu items by nav menu location
@@ -33,8 +44,9 @@ class Menu
       return [];
     }
 
-    // Build a nested array from a flat menu items array
+    $items = static::addIsCurent($items);
     $items = static::buildTree($items, 0);
+    $items = static::addIsParent($items);
 
     return $items;
   }
@@ -57,5 +69,51 @@ class Menu
       }
     }
     return $output;
+  }
+
+  // Add isCurrent to menu item
+  private static function addIsCurent($items)
+  {
+    $items = array_map(function ($item) {
+      $item->isCurrent = $item->url === static::$currentUrl;
+
+      return $item;
+    }, $items);
+
+    return $items;
+  }
+
+  // Add isParent to parent menu items
+  private static function addIsParent($items)
+  {
+    if (!$items) {
+      return null;
+    }
+
+    return array_map(function ($item) {
+      $urls = [];
+
+      if ($item->children) {
+        $urls = array_merge($urls, static::getSubitemUrls($item));
+      }
+
+      $item->isParent = $item->children && in_array(static::$currentUrl, $urls);
+      $item->children = static::addIsParent($item->children);
+
+      return $item;
+    }, $items);
+  }
+
+  private static function getSubitemUrls($item)
+  {
+    foreach ($item->children as $subitem) {
+      $urls[] = $subitem->url;
+
+      if ($subitem->children) {
+        $urls = array_merge($urls, static::getSubitemUrls($subitem));
+      }
+    }
+
+    return $urls;
   }
 }

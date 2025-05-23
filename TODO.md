@@ -32,7 +32,7 @@ A list of things I want to get done before building my first website with this p
 # Menu bugs
 
 - [x] Submenu stays visible on desktop after opening on mobile
-- [ ] Open current menu item or parent in mobile submenu
+- [x] Open current menu item or parent in mobile submenu
 - [x] Test a very long menu
 - [x] Make menu sticky when open on mobile
 
