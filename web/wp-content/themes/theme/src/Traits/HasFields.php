@@ -105,22 +105,7 @@ trait HasFields
             ],
           ],
         ],
-      ]),
-      [
-        [
-          'key' => "field_{$key}_tab_footer",
-          'name' => 'tab_footer',
-          'label' => __('Footer', 'theme'),
-          'type' => 'tab',
-          'placement' => 'left',
-        ],
-        [
-          'key' => "field_{$key}_siret",
-          'name' => 'siret',
-          'label' => __('Siret number', 'theme'),
-          'type' => 'text',
-        ],
-      ]
+      ])
     );
   }
 

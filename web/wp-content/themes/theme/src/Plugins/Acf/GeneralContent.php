@@ -42,7 +42,21 @@ class GeneralContent
     acf_add_local_field_group([
       'key' => static::$name,
       'title' => static::title(),
-      'fields' => array_merge(static::ctaFields($key, true)),
+      'fields' => array_merge(static::ctaFields($key, true), [
+        [
+          'key' => "field_{$key}_tab_footer",
+          'name' => 'tab_footer',
+          'label' => __('Footer', 'theme'),
+          'type' => 'tab',
+          'placement' => 'left',
+        ],
+        [
+          'key' => "field_{$key}_siret",
+          'name' => 'siret',
+          'label' => __('Siret number', 'theme'),
+          'type' => 'text',
+        ],
+      ]),
       'instruction_placement' => 'field',
       'location' => [
         [
