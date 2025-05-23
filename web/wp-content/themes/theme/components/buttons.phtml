@@ -7,7 +7,7 @@
   <?php foreach ($buttons as $button) { ?>
     <?= component('button', array_merge(
       [
-        'class' => "button-{$button['style']}",
+        'class' => $button['style'],
       ],
       $button['link']
     )); ?>

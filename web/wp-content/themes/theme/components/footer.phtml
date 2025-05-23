@@ -6,17 +6,11 @@
         &copy; <?= date('Y'); ?> - <?= get_bloginfo('name'); ?>
       </div>
 
-      <div class="flex flex-wrap justify-center items-end">
-        <?php foreach (Theme\Menu::items('footer') as $item) { ?>
-          <a
-            class="px-4 py-1 font-semibold no-underline text-gray-800 hover:text-primary-600"
-            href="<?= $item->url; ?>"
-            target="<?= $item->target; ?>"
-          >
-            <?= $item->title; ?>
-          </a>
-        <?php } ?>
-      </div>
+      <?php if ($value = get_field('siret', 'option')) { ?>
+        <div class="px-4 py-1">
+          Siret: <?= $value; ?>
+        </div>
+      <?php } ?>
     </footer>
 
     <?php wp_footer(); ?>

@@ -2,6 +2,8 @@
 
 A list of things I want to get done before building my first website with this project:
 
+- [ ] Allow editors to save menu's
+
 ## Editor
 
 - [x] Add support for `core/heading` block

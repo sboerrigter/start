@@ -5,4 +5,6 @@
   <?php foreach (Theme\Menu::items('main') as $item) { ?>
     <?= component('menu-item', ['item' => $item]); ?>
   <?php } ?>
+
+  <?= component('language-select'); ?>
 </div>

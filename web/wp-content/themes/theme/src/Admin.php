@@ -34,6 +34,7 @@ final class Admin
   {
     $newOrder = [
       'index.php', // Dashboard
+      'sites.php', // Network sites
 
       'separator1',
 
@@ -48,12 +49,13 @@ final class Admin
 
       'separator3',
 
-      'themes.php', // Appaerance
+      'themes.php', // Appearance
       'plugins.php', // Plugins
       'users.php', // Users
       'profile.php', // Profile
       'tools.php', // Tools
       'options-general.php', // Settings
+      'settings.php', // Network settings
 
       'separator-last',
 
