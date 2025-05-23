@@ -5,7 +5,7 @@ namespace Theme;
 class Assets
 {
   static $scriptPath = 'web/wp-content/themes/theme/scripts/theme.js';
-  static $fontUrl = 'https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap';
+  static $fontUrl = 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap';
 
   public static function init()
   {

@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "280aec45263565f6dcffd40b850c998a",
+  "content-hash": "059687fa14c9c304fb7aaabe88ee1c5d",
   "packages": [
     {
       "name": "brick/math",
@@ -471,25 +471,6 @@
         }
       ],
       "time": "2025-02-27T13:08:55+00:00"
-    },
-    {
-      "name": "koodimonni-language/core-fr_fr",
-      "version": "6.8.1",
-      "dist": {
-        "type": "zip",
-        "url": "https://downloads.wordpress.org/translation/core/6.8.1/fr_FR.zip"
-      },
-      "require": {
-        "koodimonni/composer-dropin-installer": ">=0.2.3"
-      },
-      "type": "wordpress-language",
-      "description": "WordPress core translations for French (France) - fr_fr",
-      "keywords": [
-        "Translation",
-        "WordPress",
-        "core",
-        "fr_fr"
-      ]
     },
     {
       "name": "koodimonni-language/core-nl_nl",
@@ -1238,49 +1219,6 @@
       "time": "2020-12-04T15:59:12+00:00"
     },
     {
-      "name": "roots/multisite-url-fixer",
-      "version": "1.1.0",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/roots/multisite-url-fixer.git",
-        "reference": "e664180d71b29ae8362261ae3bc772a28eac2308"
-      },
-      "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/roots/multisite-url-fixer/zipball/e664180d71b29ae8362261ae3bc772a28eac2308",
-        "reference": "e664180d71b29ae8362261ae3bc772a28eac2308",
-        "shasum": ""
-      },
-      "require": {
-        "php": ">=7.0.0"
-      },
-      "require-dev": {
-        "squizlabs/php_codesniffer": "^3.1"
-      },
-      "type": "wordpress-muplugin",
-      "autoload": {
-        "psr-4": {
-          "Roots\\Bedrock\\": "src/"
-        }
-      },
-      "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "MIT"
-      ],
-      "description": "Fixes WordPress issues with home and site URL on multisite when using Bedrock",
-      "homepage": "https://roots.io/bedrock/",
-      "keywords": [
-        "wordpress"
-      ],
-      "support": {
-        "forum": "https://discourse.roots.io/",
-        "issues": "https://github.com/roots/multisite-url-fixer/issues",
-        "source": "https://github.com/roots/multisite-url-fixer/tree/1.1.0"
-      },
-      "abandoned": true,
-      "time": "2017-10-17T21:07:50+00:00"
-    },
-    {
       "name": "roots/wordpress",
       "version": "6.8.1",
       "source": {
@@ -1752,42 +1690,6 @@
       "time": "2025-01-02T08:10:11+00:00"
     },
     {
-      "name": "trendwerk/multisite-labels",
-      "version": "1.0.2",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/trendwerk/multisite-labels.git",
-        "reference": "6ab2f87dea612ca35c90f7849bb20bbfd8416f3b"
-      },
-      "dist": {
-        "type": "zip",
-        "url": "https://api.github.com/repos/trendwerk/multisite-labels/zipball/6ab2f87dea612ca35c90f7849bb20bbfd8416f3b",
-        "reference": "6ab2f87dea612ca35c90f7849bb20bbfd8416f3b",
-        "shasum": ""
-      },
-      "require": {
-        "composer/installers": "*",
-        "php": ">=7.4"
-      },
-      "type": "wordpress-muplugin",
-      "notification-url": "https://packagist.org/downloads/",
-      "license": [
-        "GPL-2.0+"
-      ],
-      "authors": [
-        {
-          "name": "Harold Angenent",
-          "email": "harold@trendwerk.nl"
-        }
-      ],
-      "description": "Assign labels to WP Multisite websites. Useful for keeping them apart in multilingual environments.",
-      "support": {
-        "issues": "https://github.com/trendwerk/multisite-labels/issues",
-        "source": "https://github.com/trendwerk/multisite-labels/tree/1.0.2"
-      },
-      "time": "2023-03-16T10:21:05+00:00"
-    },
-    {
       "name": "vlucas/phpdotenv",
       "version": "v5.6.2",
       "source": {
@@ -1963,13 +1865,13 @@
   "packages-dev": [],
   "aliases": [],
   "minimum-stability": "dev",
-  "stability-flags": [],
+  "stability-flags": {},
   "prefer-stable": true,
   "prefer-lowest": false,
   "platform": {
     "php": ">=8.1"
   },
-  "platform-dev": [],
+  "platform-dev": {},
   "platform-overrides": {
     "php": "8.3"
   },

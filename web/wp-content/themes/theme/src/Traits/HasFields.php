@@ -137,8 +137,10 @@ trait HasFields
               'label' => __('Style', 'theme'),
               'type' => 'select',
               'choices' => [
-                'button' => __('Rose', 'theme'),
-                'button-outline' => __('Rose outline', 'theme'),
+                'blue' => __('Blue', 'theme'),
+                'blue-outline' => __('Blue outline', 'theme'),
+                'gray' => __('Gray', 'theme'),
+                'gray-outline' => __('Gray outline', 'theme'),
               ],
               'default_value' => 'blue',
               'required' => true,

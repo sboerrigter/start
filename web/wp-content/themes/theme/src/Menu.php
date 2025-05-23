@@ -12,6 +12,7 @@ class Menu
   public static function register()
   {
     register_nav_menu('main', __('Main menu'));
+    register_nav_menu('footer', __('Footer menu'));
   }
 
   // Get menu items by nav menu location

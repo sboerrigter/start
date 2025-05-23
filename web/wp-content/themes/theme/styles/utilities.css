@@ -23,6 +23,18 @@
   @apply hover:border-primary-800 hover:bg-primary-800 hover:text-white;
 }
 
+@utility button-gray {
+  @apply button;
+  @apply border-gray-600 bg-gray-600 text-white;
+  @apply hover:border-gray-800 hover:bg-gray-800;
+}
+
+@utility button-gray-outline {
+  @apply button;
+  @apply border-gray-600 bg-transparent text-gray-600;
+  @apply hover:border-gray-800 hover:bg-gray-800;
+}
+
 .button-chevron-left {
   @apply rotate-180 transition-transform group-hover:-translate-x-1;
 }

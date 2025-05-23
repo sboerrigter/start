@@ -14,7 +14,6 @@ set('default_timeout', 3600);
 // Defaults
 set('branch', 'main');
 set('local_url', 'http://www.start.test');
-set('local_domain', 'www.start.test');
 set('deploy_path', '/var/www/vhosts/TB01-004/{{alias}}/site');
 set('port', 2223);
 
@@ -32,15 +31,13 @@ host('start.bonsjoerd.eu')
   ->set('branch', 'main')
   ->set('hostname', 'tw-server-05.twservices.eu')
   ->set('remote_user', 'start.bonsjoerd.eu')
-  ->set('remote_url', 'https://start.bonsjoerd.eu')
-  ->set('remote_domain', 'start.bonsjoerd.eu');
+  ->set('remote_url', 'https://start.bonsjoerd.eu');
 
 host('hannahservices.com')
   ->set('branch', 'hannah')
   ->set('hostname', 'tw-server-05.twservices.eu')
   ->set('remote_user', 'hannahservices.com')
-  ->set('remote_url', 'https://www.hannahservices.com')
-  ->set('remote_domain', 'www.hannahservices.com');
+  ->set('remote_url', 'https://www.hannahservices.com');
 
 // Custom tasks
 
@@ -69,9 +66,6 @@ task('db:pull', function () {
   runLocally('wp db import db.sql');
   runLocally('rm -f db.sql');
   runLocally('wp search-replace {{remote_url}} {{local_url}} --all-tables');
-  runLocally(
-    'wp search-replace {{remote_domain}} {{local_domain}} --all-tables'
-  );
 });
 
 // Push database: dep db:push
@@ -90,9 +84,6 @@ task('db:push', function () {
   run('cd {{deploy_path}}/current && wp db import {{deploy_path}}/db.sql');
   run(
     'cd {{deploy_path}}/current && wp search-replace {{local_url}} {{remote_url}} --all-tables'
-  );
-  run(
-    'cd {{deploy_path}}/current && wp search-replace {{local_domain}} {{remote_domain}} --all-tables'
   );
   run('rm -f {{deploy_path}}/db.sql');
 });
@@ -120,5 +111,5 @@ task('purge:varnish', function () {
 
 // Hooks
 after('deploy:prepare', 'deploy:build');
-after('deploy', 'purge:varnish');
+// after('deploy', 'purge:varnish');
 after('deploy:failed', 'deploy:unlock');
