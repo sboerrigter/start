@@ -31,20 +31,10 @@ A list of things I want to get done before building my first website with this p
 
 # Menu bugs
 
-- [ ] Submenu stays visible on desktop after opning on mobile
+- [ ] Submenu stays visible on desktop after opening on mobile
 - [ ] Open current menu item or parent in mobile submenu
 - [ ] Test a very long menu
 - [ ] Make menu sticky when open on mobile
-
-## Devops
-
-- [x] Install and configure Deployer
-- [x] Configure automatic deployment via Github actions
-- [x] Choose a hosting provider (with SSL support and automatic backups)
-- [x] Maybe use a server management tool like ~~Forge, Runcloud, Servepilot or Ploi?~~ Cloudpanel
-- [x] Deploy to a production environent
-- [x] Choose a caching solutions like Varnish or Cloudflare
-- [x] Add a cache purge plugin
 
 ## Other stuff
 
@@ -62,8 +52,8 @@ Other things I might want to add later:
 
 - [ ] Register a custom post type (testimonials?)
 - [ ] Register a custom taxonomy
-- [ ] Category archives
-- [ ] Tag archives
-- [ ] Author archives
+- [x] Category archives
+- [x] Tag archives
+- [x] Author archives
 - [ ] Sidebar
 - [ ] Cookie consent

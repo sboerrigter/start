@@ -1,0 +1,36 @@
+# To configure authorization between remote server and Github:
+#
+# 1. SSH into the remote server: dep ssh
+# 2. Generate a new SSH key: ssh-keygen -f ~/.ssh/id_rsa_production  -o -t rsa -C 'action@deployer.org'
+# 3. Add public key to authorized_keys: cat ~/.ssh/id_rsa_production.pub >> ~/.ssh/authorized_keys_custom
+# 4. Add public key to Github > Settings > Deploy Keys: cat ~/.ssh/id_rsa_production.pub
+# 5. Add private key to Github > Settings > Secrets > Action > PRIVATE_KEY_PRODUCTION: cat ~/.ssh/id_rsa_production
+
+name: Deploy production
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: deploy-production
+
+jobs:
+  deploy-ap-production:
+    name: Deploy to start.bonsjoerd.eu
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+
+      - name: Deploy via deployer
+        uses: deployphp/action@v1
+        with:
+          dep: deploy start.bonsjoerd.eu
+          private-key: ${{ secrets.PRIVATE_KEY_PRODUCTION }}
