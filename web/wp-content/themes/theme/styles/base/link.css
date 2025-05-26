@@ -1,0 +1,5 @@
+@reference "../main.css";
+
+a {
+  @apply text-primary-600 hover:text-primary-800 cursor-pointer font-semibold underline underline-offset-2 transition-colors;
+}

@@ -1,0 +1,6 @@
+@reference "../main.css";
+@reference "./wrapper.css";
+
+.editor-styles-wrapper {
+  @apply mx-auto w-full max-w-content px-5;
+}

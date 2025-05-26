@@ -1,0 +1,7 @@
+@reference "../main.css";
+@reference "./wrapper.css";
+
+main {
+  @apply mt-10 mb-15;
+  @apply md:mt-20 md:mb-25;
+}

@@ -17,7 +17,7 @@ if (!$previousPage & !$nextPage) {
     <?= component('button', [
       'title' => __('Previous page', 'theme'),
       'iconBefore' => component('svg/chevron-right', [
-        'class' => 'button-chevron-left',
+        'class' => 'rotate-180 transition-transform group-hover:-translate-x-1',
       ]),
       'iconAfter' => false,
       'url' => $previousPage,

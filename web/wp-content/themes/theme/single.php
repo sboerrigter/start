@@ -2,8 +2,8 @@
 <?= component('header') ?>
 <?= component('hero', ['image' => false]) ?>
 
-<section>
-  <div class="content">
+<main>
+  <div class="wrapper max-w-content">
     <?= component('post-image') ?>
 
     <h1 class="mb-2">
@@ -15,7 +15,7 @@
     <?= component('post-tags') ?>
     <?= component('share') ?>
   </div>
-</section>
+</main>
 
 <?= component('cta') ?>
 <?= component('footer') ?>

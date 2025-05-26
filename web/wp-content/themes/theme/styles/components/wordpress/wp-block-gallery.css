@@ -1,0 +1,5 @@
+@reference "../../main.css";
+
+.wp-block-gallery {
+  @apply my-9;
+}

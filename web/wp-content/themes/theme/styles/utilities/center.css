@@ -1,0 +1,5 @@
+@reference "../main.css";
+
+.center {
+  @apply flex items-center justify-center;
+}

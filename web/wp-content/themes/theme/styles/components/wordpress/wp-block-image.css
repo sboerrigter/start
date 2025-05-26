@@ -1,0 +1,9 @@
+@reference "../../main.css";
+
+.wp-block-image {
+  @apply my-9;
+
+  img {
+    @apply rounded;
+  }
+}

@@ -1,14 +1,4 @@
-.alignleft {
-  @apply mx-auto sm:float-left sm:my-2 sm:mr-9;
-}
-
-.aligncenter {
-  @apply mx-auto;
-}
-
-.alignright {
-  @apply mx-auto sm:float-right sm:my-2 sm:ml-9;
-}
+@reference "../main.css";
 
 @utility button {
   @apply inline-flex gap-1 rounded border-2 px-4 py-2;
@@ -35,20 +25,18 @@
   @apply hover:border-gray-800 hover:bg-gray-800;
 }
 
-.button-chevron-left {
-  @apply rotate-180 transition-transform group-hover:-translate-x-1;
+.button {
+  @apply button;
 }
 
-.button-chevron-right {
-  @apply transition-transform group-hover:translate-x-1;
+.button-outline {
+  @apply button;
 }
 
-@utility center {
-  @apply flex items-center justify-center;
+.button-gray {
+  @apply button;
 }
 
-@utility wrapper {
-  @apply mx-auto;
-  @apply px-5;
-  @apply w-full max-w-site;
+.button-gray-outline {
+  @apply button;
 }

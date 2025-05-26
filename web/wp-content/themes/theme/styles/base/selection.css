@@ -1,0 +1,5 @@
+@reference "../main.css";
+
+::selection {
+  @apply bg-primary-600 text-white;
+}

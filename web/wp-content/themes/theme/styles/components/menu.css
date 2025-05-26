@@ -1,0 +1,37 @@
+@reference "../main.css";
+
+.menu-open {
+  @apply !pointer-events-auto !flex !translate-y-0 !opacity-100;
+}
+
+.menu-toggle-open {
+  @apply rotate-90;
+
+  .menu-toggle-line-1,
+  .menu-toggle-line-2,
+  .menu-toggle-line-3 {
+    @apply !bg-white;
+  }
+
+  .menu-toggle-line-1 {
+    @apply translate-y-1.5 rotate-45;
+  }
+
+  .menu-toggle-line-2 {
+    @apply opacity-0;
+  }
+
+  .menu-toggle-line-3 {
+    @apply -translate-y-1.5 -rotate-45;
+  }
+}
+
+.menu-item-open {
+  .menu-item-toggle {
+    @apply !rotate-0;
+  }
+
+  .menu-item-children {
+    @apply flex lg:hidden;
+  }
+}

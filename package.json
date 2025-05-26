@@ -24,7 +24,7 @@
     "singleAttributePerLine": true,
     "singleQuote": true,
     "tabWidth": 2,
-    "tailwindStylesheet": "./web/wp-content/themes/theme/styles/theme.css",
+    "tailwindStylesheet": "./web/wp-content/themes/theme/styles/main.css",
     "overrides": [
       {
         "files": "*.phtml",

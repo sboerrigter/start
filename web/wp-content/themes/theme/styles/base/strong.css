@@ -1,0 +1,5 @@
+@reference "../main.css";
+
+strong {
+  @apply font-semibold text-gray-800;
+}

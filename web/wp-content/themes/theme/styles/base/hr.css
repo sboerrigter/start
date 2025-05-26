@@ -1,0 +1,5 @@
+@reference "../main.css";
+
+hr {
+  @apply border-t;
+}

@@ -2,8 +2,8 @@
 <?= component('header') ?>
 <?= component('hero') ?>
 
-<section>
-  <div class="content">
+<main>
+  <div class="wrapper max-w-content">
     <h1><?= __('Page not found', 'theme') ?></h1>
 
     <p>
@@ -18,7 +18,7 @@
       'url' => home_url(),
     ]) ?>
   </div>
-</section>
+</main>
 
 <?= component('cta') ?>
 <?= component('footer') ?>

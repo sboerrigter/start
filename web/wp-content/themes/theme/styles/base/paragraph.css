@@ -1,0 +1,5 @@
+@reference "../main.css";
+
+p {
+  @apply mb-6 text-base/normal text-gray-600;
+}

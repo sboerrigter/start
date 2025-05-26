@@ -1,0 +1,5 @@
+@reference "../main.css";
+
+img {
+  @apply max-w-full;
+}

@@ -1,0 +1,5 @@
+@reference "../main.css";
+
+cite {
+  @apply font-bold not-italic;
+}

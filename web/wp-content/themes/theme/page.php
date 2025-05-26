@@ -2,12 +2,12 @@
 <?= component('header') ?>
 <?= component('hero') ?>
 
-<section>
-  <div class="content">
+<main>
+  <div class="wrapper max-w-content">
     <h1><?= get_the_title() ?></h1>
     <?= get_the_content() ?>
   </div>
-</section>
+</main>
 
 <?= component('cta') ?>
 <?= component('footer') ?>

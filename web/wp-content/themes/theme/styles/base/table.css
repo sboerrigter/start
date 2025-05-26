@@ -1,0 +1,10 @@
+@reference "../main.css";
+
+table {
+  @apply text-left;
+}
+
+th,
+td {
+  @apply align-top;
+}

@@ -1,0 +1,20 @@
+@reference "../main.css";
+
+ol,
+ul {
+  @apply mb-6 ml-6 list-decimal text-gray-600;
+  @apply marker:text-primary-600 marker:font-semibold;
+
+  ol,
+  ul {
+    @apply mb-0;
+  }
+}
+
+ul {
+  @apply list-disc;
+}
+
+li {
+  @apply my-2;
+}

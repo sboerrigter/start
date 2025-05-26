@@ -1,0 +1,5 @@
+@reference "../../main.css";
+
+.wp-element-caption {
+  @apply mb-0;
+}

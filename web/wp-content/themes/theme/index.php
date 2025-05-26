@@ -23,12 +23,12 @@ if (is_author()) {
 <?= component('header') ?>
 <?= component('hero', ['image' => get_field('_thumbnail_id', $pageId)]) ?>
 
-<section>
-  <div class="content max-w-site">
+<main>
+  <div class="wrapper">
     <h1><?= $title ?></h1>
     <?= component('posts') ?>
   </div>
-</section>
+</main>
 
 <?= component('cta') ?>
 <?= component('footer') ?>

@@ -12,7 +12,7 @@ export default defineConfig({
     manifest: true,
     outDir: `web/wp-content/themes/theme/dist`,
     rollupOptions: {
-      input: 'web/wp-content/themes/theme/scripts/theme.js',
+      input: 'web/wp-content/themes/theme/scripts/main.js',
     },
   },
   plugins: [
