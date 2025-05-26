@@ -1,0 +1,3 @@
+.editor-styles-wrapper {
+  @apply max-w-content mx-auto w-full px-5;
+}
