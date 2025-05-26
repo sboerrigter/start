@@ -11,7 +11,7 @@
     </h1>
 
     <?= component('post-meta', ['class' => 'md:mb-12']); ?>
-    <?= get_the_content(); ?>
+    <?= apply_filters('the_content', get_the_content()); ?>
     <?= component('post-tags'); ?>
     <?= component('share'); ?>
   </div>

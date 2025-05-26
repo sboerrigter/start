@@ -5,7 +5,7 @@
 <main>
   <div class="wrapper max-w-content">
     <h1><?= get_the_title(); ?></h1>
-    <?= get_the_content(); ?>
+    <?= apply_filters('the_content', get_the_content()); ?>
   </div>
 </main>
 
