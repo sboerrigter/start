@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Custom theme\n"
-"POT-Creation-Date: 2025-05-26 17:26+0200\n"
-"PO-Revision-Date: 2025-05-26 17:28+0200\n"
+"POT-Creation-Date: 2025-05-26 17:37+0200\n"
+"PO-Revision-Date: 2025-05-26 17:37+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -50,6 +50,10 @@ msgstr "Tags"
 #: components/post.php:32
 msgid "Read more"
 msgstr "Lees meer"
+
+#: components/posts.php:15
+msgid "No articles were found"
+msgstr "Er zijn geen artikelen gevonden"
 
 #: components/related-posts.php:4
 msgid "Related posts"
