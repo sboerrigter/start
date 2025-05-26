@@ -2,6 +2,8 @@
 
 namespace Theme\PostTypes;
 
+use Theme\Taxonomies\Category;
+use Theme\Taxonomies\Tag;
 use Theme\Traits\HasFields;
 use Theme\Traits\IsPost;
 
@@ -45,6 +47,7 @@ class Post
     ]);
   }
 
+  // Returns the post author, date and categories as a string
   public function meta(
     bool $showAuthor = true,
     bool $showDate = true,
@@ -97,5 +100,75 @@ class Post
     $meta = implode(', ', $meta);
 
     return $meta;
+  }
+
+  // Returns the related posts of the current post, based on matching tags or categories
+  public function related($number = 3)
+  {
+    $posts = [];
+    $query = [
+      'fields' => 'ids',
+      'post_type' => static::$postType,
+      'posts_per_page' => $number,
+      'post__not_in' => [$this->id],
+    ];
+
+    // Get related posts by tag
+    if ($terms = $this->tags()) {
+      $termIds = array_map(function ($term) {
+        return $term->id();
+      }, $terms);
+
+      $relatedPosts = get_posts(
+        array_merge($query, [
+          'tax_query' => [
+            [
+              'field' => 'term_id',
+              'taxonomy' => Tag::$taxonomy,
+              'terms' => $termIds,
+            ],
+          ],
+        ])
+      );
+
+      $posts = array_merge($posts, $relatedPosts);
+    }
+
+    // Add related posts by category if we don't have enough posts
+    if (count($posts) < $number && ($terms = $this->categories())) {
+      $termIds = array_map(function ($term) {
+        return $term->id();
+      }, $terms);
+
+      $relatedPosts = get_posts(
+        array_merge($query, [
+          'post__not_in' => array_merge([$this->id], $posts),
+          'tax_query' => [
+            [
+              'field' => 'term_id',
+              'taxonomy' => Category::$taxonomy,
+              'terms' => $termIds,
+            ],
+          ],
+        ])
+      );
+
+      $posts = array_merge($posts, $relatedPosts);
+    }
+
+    // Add latest posts if we don't have enough posts
+    if (count($posts) < $number) {
+      $latestPosts = get_posts(
+        array_merge($query, [
+          'post__not_in' => array_merge([$this->id], $posts),
+        ])
+      );
+
+      $posts = array_merge($posts, $latestPosts);
+    }
+
+    return array_map(function ($id) {
+      return new self($id);
+    }, $posts);
   }
 }

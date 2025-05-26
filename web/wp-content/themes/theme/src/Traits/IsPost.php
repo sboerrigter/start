@@ -113,18 +113,4 @@ trait IsPost
       ])
     );
   }
-
-  public function related($number = 3)
-  {
-    $ids = get_posts([
-      'fields' => 'ids',
-      'post_type' => static::$postType,
-      'posts_per_page' => $number,
-      'post__not_in' => [$this->id],
-    ]);
-
-    return array_map(function ($id) {
-      return new self($id);
-    }, $ids);
-  }
 }
