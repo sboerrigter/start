@@ -3,7 +3,6 @@
     class="mb-6 block aspect-[3/2] w-full overflow-hidden rounded-lg bg-gray-600 hover:bg-primary-600"
     href="<?= get_the_permalink(); ?>"
   >
-    <!-- prettier-ignore -->
     <?php if ($image = get_field('_thumbnail_id')) { ?>
       <?= component('image', [
         'class' => 'w-full h-full object-cover hover:scale-110 transition-transform duration-300',

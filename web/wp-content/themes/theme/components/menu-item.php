@@ -1,4 +1,3 @@
-<!-- prettier-ignore-attribute class -->
 <div
   class="
     menu-item group relative
@@ -10,7 +9,6 @@
   "
 >
   <div class="flex">
-    <!-- prettier-ignore-attribute class -->
     <a
       class="
         flex gap-1 items-center max-lg:w-full no-underline text-white/75 hover:text-white/100
@@ -24,7 +22,6 @@
     >
       <?= $item->title; ?>
 
-      <!-- prettier-ignore -->
       <?php if ($item->children) { ?>
         <?= component('svg/chevron-down', [
           'class' => 'hidden lg:block w-5 h-5',
@@ -45,7 +42,6 @@
   <div
     class="menu-item-children hidden flex-col max-lg:mb-5 max-lg:ml-5 lg:absolute lg:left-0 lg:w-60 lg:rounded lg:bg-primary-900 lg:py-3 lg:group-last:right-0 lg:group-last:left-auto lg:group-hover:flex"
   >
-    <!-- prettier-ignore -->
     <?php foreach ($item->children as $item) { ?>
         <?= component('menu-item', [
           'item' => $item,

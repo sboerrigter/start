@@ -1,4 +1,3 @@
-<!-- prettier-ignore -->
 <?php
 global $wp_query;
 
@@ -12,7 +11,6 @@ if (!$previousPage & !$nextPage) {
 ?>
 
 <div class="mt-10 flex w-full flex-wrap justify-between md:mt-15">
-  <!-- prettier-ignore -->
   <?php if ($previousPage) { ?>
     <?= component('button', [
       'title' => __('Previous page', 'theme'),
@@ -24,7 +22,6 @@ if (!$previousPage & !$nextPage) {
     ]) ?>
   <?php } ?>
 
-  <!-- prettier-ignore -->
   <?php if ($nextPage) { ?>
     <?= component('button', [
       'class' => 'ml-auto',

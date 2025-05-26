@@ -1,0 +1,4 @@
+web/wp-content/themes/theme/components/**/*.php
+web/wp-content/themes/theme/*.php
+
+!web/wp-content/themes/theme/functions.php

@@ -1,4 +1,3 @@
-<!-- prettier-ignore -->
 <?php
 $url = urlencode(get_the_permalink());
 $title = urlencode(get_the_title());
@@ -39,13 +38,13 @@ $buttons = [
 
   <div class="flex flex-wrap gap-1.5">
     <?php foreach ($buttons as $button) { ?>
-    <a
-      class="rounded border border-gray-300 p-2 text-gray-600 hover:border-primary-600 hover:bg-primary-600 hover:text-white"
-      href="<?= $button['href']; ?>"
-      title="<?= $button['title']; ?>"
-    >
-      <?= component('svg/' . $button['icon'], [ 'class' => 'w-5 h-5' ]); ?>
-    </a>
+      <a
+        class="rounded border border-gray-300 p-2 text-gray-600 hover:border-primary-600 hover:bg-primary-600 hover:text-white"
+        href="<?= $button['href']; ?>"
+        title="<?= $button['title']; ?>"
+      >
+        <?= component('svg/' . $button['icon'], [ 'class' => 'w-5 h-5' ]); ?>
+      </a>
     <?php } ?>
   </div>
 </div>

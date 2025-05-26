@@ -1,4 +1,3 @@
-<!-- prettier-ignore -->
 <?php
 $pageId = get_option('page_for_posts');
 
@@ -19,16 +18,16 @@ if (is_author()) {
 }
 ?>
 
-<?= component('head') ?>
-<?= component('header') ?>
-<?= component('hero', ['image' => get_field('_thumbnail_id', $pageId)]) ?>
+<?= component('head'); ?>
+<?= component('header'); ?>
+<?= component('hero', ['image' => get_field('_thumbnail_id', $pageId)]); ?>
 
 <main>
   <div class="wrapper">
     <h1><?= $title ?></h1>
-    <?= component('posts') ?>
+    <?= component('posts'); ?>
   </div>
 </main>
 
-<?= component('cta') ?>
-<?= component('footer') ?>
+<?= component('cta'); ?>
+<?= component('footer'); ?>

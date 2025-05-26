@@ -1,10 +1,12 @@
-<?= component('head') ?>
-<?= component('header') ?>
-<?= component('hero') ?>
+<?= component('head'); ?>
+<?= component('header'); ?>
+<?= component('hero'); ?>
 
 <main>
   <div class="wrapper max-w-content">
-    <h1><?= __('Page not found', 'theme') ?></h1>
+    <h1>
+      <?= __('Page not found', 'theme'); ?>
+    </h1>
 
     <p>
       <?= __(
@@ -16,7 +18,7 @@
     <?= component('button', [
       'title' => __('To the homepage', 'theme'),
       'url' => home_url(),
-    ]) ?>
+    ]); ?>
   </div>
 </main>
 

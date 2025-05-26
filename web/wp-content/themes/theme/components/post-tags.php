@@ -10,11 +10,11 @@ if (!$terms) {
 
 <div class="mb-6 flex flex-wrap gap-1.5">
   <?php foreach ($terms as $term) { ?>
-  <a
-    class="rounded bg-gray-100 px-3 py-1 text-gray-800 no-underline hover:bg-primary-600 hover:text-white"
-    href="<?= get_term_link($term); ?>"
-  >
-    <?= $term->name; ?>
-  </a>
+    <a
+      class="rounded bg-gray-100 px-3 py-1 text-gray-800 no-underline hover:bg-primary-600 hover:text-white"
+      href="<?= get_term_link($term); ?>"
+    >
+      <?= $term->name; ?>
+    </a>
   <?php } ?>
 </div>

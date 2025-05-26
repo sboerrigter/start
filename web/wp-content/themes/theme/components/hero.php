@@ -5,7 +5,6 @@ if ($image !== false && !$image) {
 ?>
 
 <header class="wrapper">
-  <!-- prettier-ignore -->
   <?php if ($image && $image !== false) { ?>
     <?= component('image', [
       'class' => implode(' ', [
@@ -18,6 +17,6 @@ if ($image !== false && !$image) {
       'widths' => [335, 480, 600, 1200],
     ]); ?>
   <?php } else { ?>
-  <hr />
+    <hr />
   <?php } ?>
 </header>

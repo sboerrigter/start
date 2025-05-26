@@ -24,14 +24,6 @@
     "singleAttributePerLine": true,
     "singleQuote": true,
     "tabWidth": 2,
-    "tailwindStylesheet": "./web/wp-content/themes/theme/styles/main.css",
-    "overrides": [
-      {
-        "files": "*.phtml",
-        "options": {
-          "parser": "html"
-        }
-      }
-    ]
+    "tailwindStylesheet": "./web/wp-content/themes/theme/styles/main.css"
   }
 }

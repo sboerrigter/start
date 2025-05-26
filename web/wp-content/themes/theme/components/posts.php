@@ -1,8 +1,7 @@
 <div class="grid gap-10 sm:grid-cols-2 md:gap-15 lg:grid-cols-3">
-  <!-- prettier-ignore -->
-  <?php while ( have_posts() ) {
-    the_post();
-    ?>
+  <?php while ( have_posts() ) { ?>
+    <?php the_post(); ?>
+
     <?= component('post'); ?>
   <?php } ?>
 </div>
