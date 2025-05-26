@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Custom theme\n"
-"POT-Creation-Date: 2025-04-11 15:16+0200\n"
-"PO-Revision-Date: 2025-04-11 15:17+0200\n"
+"POT-Creation-Date: 2025-05-26 17:26+0200\n"
+"PO-Revision-Date: 2025-05-26 17:28+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -19,27 +19,83 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: 404.php:3
+#: 404.php:8
+msgid "Page not found"
+msgstr "Pagina niet gevonden"
+
+#: 404.php:13
 msgid ""
 "Unfortunately, this page does not exist. You can go to the homepage, or use "
 "the menu above to navigate to other pages."
 msgstr ""
-"Deze pagina bestaat helaas niet. Je kan naar de homepagina gaan, of het "
-"menu hierboven gebruiken om naar andere pagina's te navigeren."
+"Deze pagina bestaat helaas niet. Je kan naar de homepagina gaan, of het menu "
+"hierboven gebruiken om naar andere pagina's te navigeren."
 
-#: 404.php:7
+#: 404.php:19
 msgid "To the homepage"
 msgstr "Naar de homepagina"
 
-#: 404.php:17
-msgid "Page not found"
-msgstr "Pagina niet gevonden"
+#: components/pagination.php:16
+msgid "Previous page"
+msgstr "Vorige pagina"
 
-#: src/Menu.php:14
+#: components/pagination.php:28
+msgid "Next page"
+msgstr "Volgende pagina"
+
+#: components/post-tags.php:9
+msgid "Tags"
+msgstr "Tags"
+
+#: components/post.php:32
+msgid "Read more"
+msgstr "Lees meer"
+
+#: components/related-posts.php:4
+msgid "Related posts"
+msgstr "Gerelateerde berichten"
+
+#: components/related-posts.php:9
+msgid "View all articles"
+msgstr "Bekijk alle artikelen"
+
+#: components/share.php:7
+msgid "E-mail this article"
+msgstr "Stuur dit artikel per e-mail"
+
+#: components/share.php:12
+msgid "Share this article via WhatsApp"
+msgstr "Deel dit artikel via WhatsApp"
+
+#: components/share.php:17
+msgid "Share this article on LinkedIn"
+msgstr "Deel dit artikel op LinkedIn"
+
+#: components/share.php:22
+msgid "Share this article on Facebook"
+msgstr "Deel dit artikel op Facebook"
+
+#: components/share.php:27
+msgid "Share this article on X"
+msgstr "Deel dit artikel op X"
+
+#: components/share.php:36
+msgid "Share this article"
+msgstr "Deel dit artikel"
+
+#: index.php:6
+msgid "Articles by"
+msgstr "Artikelen van"
+
+#: index.php:13
+msgid "Articles about"
+msgstr "Artikelen over"
+
+#: src/Menu.php:18
 msgid "Main menu"
 msgstr "Hoofdmenu"
 
-#: src/Menu.php:15
+#: src/Menu.php:19
 msgid "Footer menu"
 msgstr "Footer menu"
 
@@ -51,25 +107,37 @@ msgstr "Algemene inhoud"
 msgid "General"
 msgstr "Algemeen"
 
-#: src/PostTypes/Page.php:17
+#: src/PostTypes/Page.php:19
 msgid "Pages"
 msgstr "Pagina’s"
 
-#: src/PostTypes/Page.php:18
+#: src/PostTypes/Page.php:20
 msgid "Page"
 msgstr "Pagina"
 
-#: src/PostTypes/Page.php:31 src/PostTypes/Post.php:31
+#: src/PostTypes/Page.php:33 src/PostTypes/Post.php:33
 msgid "settings"
 msgstr "instellingen"
 
-#: src/PostTypes/Post.php:17
+#: src/PostTypes/Post.php:19
 msgid "Posts"
 msgstr "Berichten"
 
-#: src/PostTypes/Post.php:18
+#: src/PostTypes/Post.php:20
 msgid "Post"
 msgstr "Bericht"
+
+#: src/PostTypes/Post.php:57
+msgid "By"
+msgstr "Door"
+
+#: src/PostTypes/Post.php:76
+msgid "category"
+msgstr "categorie"
+
+#: src/PostTypes/Post.php:77
+msgid "categories"
+msgstr "categorieën"
 
 #: src/Traits/HasFields.php:15
 msgid "Header"
@@ -159,6 +227,9 @@ msgstr "Sjoerd Boerrigter"
 #. Author URI of the plugin/theme
 msgid "https://www.bonsjoerd.eu"
 msgstr "https://www.bonsjoerd.eu"
+
+#~ msgid "Stuur dit artikel per e-mail"
+#~ msgstr "Stuur dit artikel per e-mail"
 
 #~ msgid "Custom theme"
 #~ msgstr "Custom thema"

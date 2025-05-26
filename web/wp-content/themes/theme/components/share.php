@@ -4,27 +4,27 @@ $title = urlencode($post->title());
 
 $buttons = [
   [
-    'title' => __('Stuur dit artikel per e-mail', 'theme'),
+    'title' => __('E-mail this article', 'theme'),
     'href' => "mailto:?subject={$title}&amp;body={$url}",
     'icon' => 'mail',
   ],
   [
-    'title' => __('Deel dit artikel via WhatsApp', 'theme'),
+    'title' => __('Share this article via WhatsApp', 'theme'),
     'href' => "https://wa.me?text={$title}%20-%20{$url}",
     'icon' => 'whatsapp',
   ],
   [
-    'title' => __('Deel dit artikel op LinkedIn', 'theme'),
+    'title' => __('Share this article on LinkedIn', 'theme'),
     'href' => "https://www.linkedin.com/shareArticle?url={$url}",
     'icon' => 'linkedin',
   ],
   [
-    'title' => __('Deel dit artikel op Facebook', 'theme'),
+    'title' => __('Share this article on Facebook', 'theme'),
     'href' => "https://www.facebook.com/sharer.php?u={$url}",
     'icon' => 'facebook',
   ],
   [
-    'title' => __('Deel dit artikel op X', 'theme'),
+    'title' => __('Share this article on X', 'theme'),
     'href' => "https://x.com/intent/post?url={$url}&amp;text={$title}",
     'icon' => 'x-social',
   ],
