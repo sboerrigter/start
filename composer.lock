@@ -398,16 +398,16 @@
     },
     {
       "name": "intervention/image",
-      "version": "3.11.2",
+      "version": "3.11.3",
       "source": {
         "type": "git",
         "url": "https://github.com/Intervention/image.git",
-        "reference": "ebbb711871fb261c064cf4c422f5f3c124fe1842"
+        "reference": "d0f097b8a3fa8fb758efc9440b513aa3833cda17"
       },
       "dist": {
         "type": "zip",
-        "url": "https://api.github.com/repos/Intervention/image/zipball/ebbb711871fb261c064cf4c422f5f3c124fe1842",
-        "reference": "ebbb711871fb261c064cf4c422f5f3c124fe1842",
+        "url": "https://api.github.com/repos/Intervention/image/zipball/d0f097b8a3fa8fb758efc9440b513aa3833cda17",
+        "reference": "d0f097b8a3fa8fb758efc9440b513aa3833cda17",
         "shasum": ""
       },
       "require": {
@@ -454,7 +454,7 @@
       ],
       "support": {
         "issues": "https://github.com/Intervention/image/issues",
-        "source": "https://github.com/Intervention/image/tree/3.11.2"
+        "source": "https://github.com/Intervention/image/tree/3.11.3"
       },
       "funding": [
         {
@@ -470,7 +470,7 @@
           "type": "ko_fi"
         }
       ],
-      "time": "2025-02-27T13:08:55+00:00"
+      "time": "2025-05-22T17:26:23+00:00"
     },
     {
       "name": "koodimonni-language/core-nl_nl",
@@ -1793,15 +1793,15 @@
     },
     {
       "name": "wpackagist-plugin/seo-by-rank-math",
-      "version": "1.0.244",
+      "version": "1.0.245",
       "source": {
         "type": "svn",
         "url": "https://plugins.svn.wordpress.org/seo-by-rank-math/",
-        "reference": "tags/1.0.244"
+        "reference": "tags/1.0.245"
       },
       "dist": {
         "type": "zip",
-        "url": "https://downloads.wordpress.org/plugin/seo-by-rank-math.1.0.244.zip"
+        "url": "https://downloads.wordpress.org/plugin/seo-by-rank-math.1.0.245.zip"
       },
       "require": {
         "composer/installers": "^1.0 || ^2.0"
@@ -1847,10 +1847,10 @@
     },
     {
       "name": "wpengine/advanced-custom-fields-pro",
-      "version": "6.4.1",
+      "version": "6.4.2",
       "dist": {
         "type": "zip",
-        "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?s=composer&p=pro&t=6.4.1"
+        "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?s=composer&p=pro&t=6.4.2"
       },
       "require": {
         "composer/installers": "~1.0 || ~2.0"
