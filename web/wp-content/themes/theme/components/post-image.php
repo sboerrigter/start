@@ -1,4 +1,4 @@
-<?php if ($image = get_field('_thumbnail_id')) { ?>
+<?php if ($image = $post->image()) { ?>
   <?= component('image', [
     'class' => 'rounded-lg object-cover mb-6 md:mb-12',
     'src' => $image,

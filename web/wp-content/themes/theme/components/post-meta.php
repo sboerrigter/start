@@ -1,34 +1,9 @@
-<?php
-$meta = [];
-
-
-// Author
-if (!isset($author) || $author !== false) {
-  $label = __('By', 'theme');
-  $name = get_the_author();
-  $link = get_author_posts_url(get_the_author_meta('ID'));
-  $meta[] = "$label <a class='text-gray-800 no-underline hover:text-primary-600 hover:underline' href='{$link}'>{$name}</a>";
-}
-
-// Post date
-$meta[] = get_the_date();
-
-// Categories
-if (
-  (!isset($categories) ||$categories !== false) &&
-  $categories = get_the_terms($post, 'category')
-) {
-  $label = count($categories) == 1 ? __('category', 'theme') : __('categories', 'theme');
-  $categories = array_map(function ($term) {
-    $link = get_term_link($term);
-    return "<a class='text-gray-800 no-underline hover:text-primary-600 hover:underline' href='{$link}'>{$term->name}</a>";
-  }, $categories);
-  $categories = implode(', ', $categories);
-
-  $meta[] = "{$label}: {$categories}";
-}
-?>
-
-<p class="font-semibold text-gray-400 <?= $class ?? ''; ?>">
-  <?= implode(', ', $meta); ?>
-</p>
+<?php if ($meta = $post->meta(
+  $showAuthor ?? true,
+  $showDate ?? true,
+  $showCategories ?? true
+)) { ?>
+  <p class="font-semibold text-gray-400 <?= $class ?? ''; ?>">
+    <?= $meta; ?>
+  </p>
+<?php } ?>

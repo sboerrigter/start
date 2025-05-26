@@ -3,12 +3,14 @@
 namespace Theme\PostTypes;
 
 use Theme\Traits\HasFields;
+use Theme\Traits\IsPost;
 
 class Page
 {
+  use IsPost;
   use HasFields;
 
-  static $name = 'page';
+  static $postType = 'page';
   static $labels;
 
   public static function init()
@@ -23,7 +25,7 @@ class Page
 
   public static function registerFields()
   {
-    $key = static::$name;
+    $key = static::$postType;
 
     acf_add_local_field_group([
       'key' => "{$key}_settings",

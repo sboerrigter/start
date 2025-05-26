@@ -13,13 +13,13 @@ We can't use import.meta.glob in theme.js because Tailwind utilities have to be 
 @import './base/img.css';
 @import './base/link.css';
 @import './base/list.css';
-@import './base/main.css';
 @import './base/paragraph.css';
 @import './base/selection.css';
 @import './base/strong.css';
 @import './base/table.css';
 @import './components/button.css';
 @import './components/menu.css';
+@import './components/section.css';
 @import './components/wordpress/editor-styles.css';
 @import './components/wordpress/wp-block-audio.css';
 @import './components/wordpress/wp-block-buttons.css';

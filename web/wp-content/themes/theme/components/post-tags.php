@@ -1,7 +1,7 @@
 <?php
-$terms = get_the_terms($post, 'post_tag');
+$tags = $post->tags();
 
-if (!$terms) {
+if (!$tags) {
   return;
 }
 ?>
@@ -9,12 +9,12 @@ if (!$terms) {
 <p class="mb-2 font-bold text-gray-800"><?= __('Tags', 'theme'); ?></p>
 
 <div class="mb-6 flex flex-wrap gap-1.5">
-  <?php foreach ($terms as $term) { ?>
+  <?php foreach ($tags as $term) { ?>
     <a
       class="rounded bg-gray-100 px-3 py-1 text-gray-800 no-underline hover:bg-primary-600 hover:text-white"
-      href="<?= get_term_link($term); ?>"
+      href="<?= $term->link(); ?>"
     >
-      <?= $term->name; ?>
+      <?= $term->title(); ?>
     </a>
   <?php } ?>
 </div>

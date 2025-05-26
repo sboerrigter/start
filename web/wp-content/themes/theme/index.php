@@ -22,7 +22,7 @@ if (is_author()) {
 <?= component('header'); ?>
 <?= component('hero', ['image' => get_field('_thumbnail_id', $pageId)]); ?>
 
-<main>
+<main class="section">
   <div class="wrapper">
     <h1><?= $title ?></h1>
     <?= component('posts'); ?>

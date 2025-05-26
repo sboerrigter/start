@@ -12,6 +12,7 @@ Assets::init();
 Cleanup::init();
 Content::init();
 Editor::init();
+Excerpt::init();
 Image::init();
 Media::init();
 Menu::init();

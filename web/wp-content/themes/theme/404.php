@@ -2,7 +2,7 @@
 <?= component('header'); ?>
 <?= component('hero'); ?>
 
-<main>
+<main class="section">
   <div class="wrapper max-w-content">
     <h1>
       <?= __('Page not found', 'theme'); ?>

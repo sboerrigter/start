@@ -1,13 +1,24 @@
+<?php
+use Theme\PostTypes\Page;
+
+$post = new Page(get_the_ID());
+?>
+
 <?= component('head'); ?>
 <?= component('header'); ?>
-<?= component('hero'); ?>
+<?= component('hero', ['post' => $post]); ?>
 
-<main>
+<main class="section">
   <div class="wrapper max-w-content">
-    <h1><?= get_the_title(); ?></h1>
-    <?= apply_filters('the_content', get_the_content()); ?>
+    <h1>
+      <?= $post->title(); ?>
+    </h1>
+
+    <?= $post->content(); ?>
   </div>
 </main>
 
-<?= component('cta'); ?>
+<?= component('cta', ['post' => $post]); ?>
 <?= component('footer'); ?>
+
+

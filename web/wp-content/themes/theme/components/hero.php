@@ -1,11 +1,5 @@
-<?php
-if ($image !== false && !$image) {
-  $image = get_field('_thumbnail_id');
-}
-?>
-
 <header class="wrapper">
-  <?php if ($image && $image !== false) { ?>
+  <?php if (isset($post) && $image = $post->image()) { ?>
     <?= component('image', [
       'class' => implode(' ', [
         'rounded-lg object-cover',

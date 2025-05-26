@@ -1,21 +1,33 @@
+<?php
+use Theme\PostTypes\Post;
+
+$post = new Post(get_the_ID());
+?>
+
 <?= component('head'); ?>
 <?= component('header'); ?>
-<?= component('hero', ['image' => false]); ?>
+<?= component('hero'); ?>
 
-<main>
+<main class="section">
   <div class="wrapper max-w-content">
-    <?= component('post-image'); ?>
+    <?= component('post-image', ['post' => $post]); ?>
 
     <h1 class="mb-2">
-      <?= get_the_title(); ?>
+      <?= $post->title(); ?>
     </h1>
 
-    <?= component('post-meta', ['class' => 'md:mb-12']); ?>
-    <?= apply_filters('the_content', get_the_content()); ?>
-    <?= component('post-tags'); ?>
-    <?= component('share'); ?>
+    <?= component('post-meta', [
+      'class' => 'md:mb-12',
+      'post' => $post,
+    ]); ?>
+
+    <?= $post->content(); ?>
+
+    <?= component('post-tags', ['post' => $post]); ?>
+    <?= component('share', ['post' => $post]); ?>
   </div>
 </main>
 
-<?= component('cta'); ?>
+<?= component('related-posts', ['post' => $post]); ?>
+<?= component('cta', ['post' => $post]); ?>
 <?= component('footer'); ?>
