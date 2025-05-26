@@ -16,18 +16,21 @@ h6 {
   }
 }
 
-h1 {
+h1,
+.h1 {
   @apply mb-4 text-3xl/tight;
   @apply xs:mb-8 xs:text-4xl/tight;
   @apply md:mb-10 md:text-5xl/tight;
 }
 
-h2 {
+h2,
+.h2 {
   @apply mb-3 text-2xl/snug;
   @apply md:mb-4 md:text-3xl/tight;
 }
 
-h3 {
+h3,
+.h3 {
   @apply mb-2 text-xl;
   @apply md:mb-3 md:text-2xl/snug;
 }

@@ -1,4 +1,4 @@
-<div>
+<div class="<?= $class ?? ''; ?>">
   <a
     class="mb-6 block aspect-[3/2] w-full overflow-hidden rounded-lg bg-gray-600 hover:bg-primary-600"
     href="<?= $post->link(); ?>"

@@ -24,9 +24,8 @@ if (!$previousPage & !$nextPage) {
 
   <?php if ($nextPage) { ?>
     <?= component('button', [
-      'class' => 'ml-auto',
+      'class' => 'button ml-auto',
       'title' => __('Next page', 'theme'),
-      'hideArrow' => true,
       'url' => $nextPage,
     ]) ?>
   <?php } ?>

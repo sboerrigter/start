@@ -1,5 +1,5 @@
 <a
-  class="button group <?= $class ?? ''; ?>"
+  class="group <?= $class ?? 'button'; ?>"
   <?php
   if (!empty($url)) {
     echo 'href="' . $url . '" ';
