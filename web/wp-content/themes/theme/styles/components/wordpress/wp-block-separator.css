@@ -1,5 +1,3 @@
-@reference "../../main.css";
-
 .wp-block-separator {
   @apply mx-auto my-9 h-px w-1/4 border-none bg-gray-200;
 

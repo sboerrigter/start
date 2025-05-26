@@ -1,7 +1,3 @@
-@reference "../main.css";
-
-@layer components {
-  .wrapper {
-    @apply mx-auto w-full max-w-site px-5;
-  }
+.wrapper {
+  @apply max-w-site mx-auto w-full px-5;
 }

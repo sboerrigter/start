@@ -1,5 +1,3 @@
-@reference "../main.css";
-
 table {
   @apply text-left;
 }

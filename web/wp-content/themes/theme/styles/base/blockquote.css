@@ -1,9 +1,7 @@
-@reference "../main.css";
-
 blockquote {
-  @apply my-9 border-l-3 border-primary-600 pl-6;
+  @apply border-l-3 border-primary-600 my-9 pl-6;
 
   :not(cite) {
-    @apply mb-4 text-2xl/normal font-semibold text-primary-600;
+    @apply text-primary-600 mb-4 text-2xl/normal font-semibold;
   }
 }

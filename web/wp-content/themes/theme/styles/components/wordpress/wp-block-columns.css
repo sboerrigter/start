@@ -1,5 +1,3 @@
-@reference "../../main.css";
-
 .wp-block-columns {
   @apply my-6 gap-6 min-[782px]:my-9 min-[782px]:gap-9;
 }

@@ -1,5 +1,3 @@
-@reference "../main.css";
-
 .menu-open {
   @apply !pointer-events-auto !flex !translate-y-0 !opacity-100;
 }

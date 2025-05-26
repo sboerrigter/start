@@ -1,5 +1,3 @@
-@reference "../main.css";
-
 .alignleft {
   @apply mx-auto sm:float-left sm:my-2 sm:mr-9;
 }

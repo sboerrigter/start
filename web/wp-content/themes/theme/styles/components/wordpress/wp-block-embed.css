@@ -1,5 +1,3 @@
-@reference "../../main.css";
-
 .wp-block-embed {
   @apply my-9;
 }

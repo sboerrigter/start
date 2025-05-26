@@ -1,5 +1,3 @@
-@reference "../main.css";
-
 body {
   @apply bg-white text-gray-800;
   @apply font-[Inter] leading-normal antialiased;

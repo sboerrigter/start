@@ -1,5 +1,3 @@
-@reference "../main.css";
-
 ol,
 ul {
   @apply mb-6 ml-6 list-decimal text-gray-600;

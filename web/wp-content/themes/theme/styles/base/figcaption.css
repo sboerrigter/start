@@ -1,5 +1,3 @@
-@reference "../main.css";
-
 figcaption {
   @apply text-sm text-gray-400;
 }

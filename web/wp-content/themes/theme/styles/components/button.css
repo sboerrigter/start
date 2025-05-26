@@ -1,5 +1,3 @@
-@reference "../main.css";
-
 @utility button {
   @apply inline-flex gap-1 rounded border-2 px-4 py-2;
   @apply cursor-pointer font-semibold no-underline;
@@ -9,7 +7,7 @@
 
 @utility button-outline {
   @apply button;
-  @apply border-primary-600 bg-transparent text-primary-600;
+  @apply border-primary-600 text-primary-600 bg-transparent;
   @apply hover:border-primary-800 hover:bg-primary-800 hover:text-white;
 }
 
@@ -23,20 +21,4 @@
   @apply button;
   @apply border-gray-600 bg-transparent text-gray-600;
   @apply hover:border-gray-800 hover:bg-gray-800;
-}
-
-.button {
-  @apply button;
-}
-
-.button-outline {
-  @apply button;
-}
-
-.button-gray {
-  @apply button;
-}
-
-.button-gray-outline {
-  @apply button;
 }

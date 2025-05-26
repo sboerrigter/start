@@ -1,0 +1,60 @@
+@import 'tailwindcss/theme.css';
+@import 'tailwindcss/preflight.css';
+
+/* @todo use import globbing when https://github.com/vitejs/vite/issues/12336 is fixed
+We can't use import.meta.glob in theme.js because Tailwind utilities have to be loaded after component's and we can't use @layer in the WordPress editor (see: https://github.com/WordPress/gutenberg/issues/69833) */
+@import './base/blockquote.css';
+@import './base/body.css';
+@import './base/cite.css';
+@import './base/figcaption.css';
+@import './base/heading.css';
+@import './base/hr.css';
+@import './base/iframe.css';
+@import './base/img.css';
+@import './base/link.css';
+@import './base/list.css';
+@import './base/paragraph.css';
+@import './base/selection.css';
+@import './base/strong.css';
+@import './base/table.css';
+@import './components/button.css';
+@import './components/main.css';
+@import './components/menu.css';
+@import './components/wordpress/editor-styles.css';
+@import './components/wordpress/wp-block-audio.css';
+@import './components/wordpress/wp-block-buttons.css';
+@import './components/wordpress/wp-block-columns.css';
+@import './components/wordpress/wp-block-embed.css';
+@import './components/wordpress/wp-block-gallery.css';
+@import './components/wordpress/wp-block-image.css';
+@import './components/wordpress/wp-block-separator.css';
+@import './components/wordpress/wp-block-table.css';
+@import './components/wordpress/wp-block-video.css';
+@import './components/wordpress/wp-element-caption.css';
+@import './components/wrapper.css';
+@import './utilities/align.css';
+@import './utilities/center.css';
+
+@import 'tailwindcss/utilities.css';
+
+@custom-variant hover (&:hover);
+
+@theme {
+  --breakpoint-2xs: 375px;
+  --breakpoint-xs: 480px;
+
+  --container-content: 760px;
+  --container-site: 1240px;
+
+  --color-primary-50: var(--color-blue-50);
+  --color-primary-100: var(--color-blue-100);
+  --color-primary-200: var(--color-blue-200);
+  --color-primary-300: var(--color-blue-300);
+  --color-primary-400: var(--color-blue-400);
+  --color-primary-500: var(--color-blue-500);
+  --color-primary-600: var(--color-blue-600);
+  --color-primary-700: var(--color-blue-700);
+  --color-primary-800: var(--color-blue-800);
+  --color-primary-900: var(--color-blue-900);
+  --color-primary-950: var(--color-blue-950);
+}

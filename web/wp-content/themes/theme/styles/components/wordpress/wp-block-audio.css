@@ -1,5 +1,3 @@
-@reference "../../main.css";
-
 .wp-block-audio {
   @apply my-9;
 }
