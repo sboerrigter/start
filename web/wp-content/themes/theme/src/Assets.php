@@ -14,6 +14,8 @@ class Assets
     add_filter('script_loader_tag', [static::class, 'scriptLoader'], 10, 3);
     add_action('after_setup_theme', [static::class, 'editorStyles']);
     add_action('enqueue_block_editor_assets', [static::class, 'editorScripts']);
+    add_action('enqueue_block_editor_assets', [static::class, 'editorScripts']);
+    add_action('admin_footer', [static::class, 'removeBodyClass']);
   }
 
   // Preconnect to Google fonts
@@ -93,5 +95,16 @@ class Assets
     ];
 
     return $urls[$type];
+  }
+
+  // Remove .wp-core-ui body class from admin to prevent CSS conflicts with wp-includes/dist/css/buttons.min.css
+  public static function removeBodyClass()
+  {
+    ?>
+    <script>
+      const body = document.querySelector('body');
+      body.classList.remove('wp-core-ui');
+    </script>
+    <?php
   }
 }
