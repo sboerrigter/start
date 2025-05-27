@@ -1,5 +1,5 @@
 <?php
-$tags = $post->tags();
+$tags = $p->tags();
 
 if (!$tags) {
   return;

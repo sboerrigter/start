@@ -1,5 +1,5 @@
 <header class="wrapper">
-  <?php if (isset($post) && $image = $post->image()) { ?>
+  <?php if (isset($p) && $image = $p->image()) { ?>
     <?= component('image', [
       'class' => implode(' ', [
         'rounded-lg object-cover',

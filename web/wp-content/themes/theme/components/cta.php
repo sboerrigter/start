@@ -1,9 +1,9 @@
 <footer class="wrapper">
-  <?php if (isset($post) && $post->field('show_cta')) { ?>
+  <?php if (isset($p) && $p->field('show_cta')) { ?>
     <?php
-    $title = $post->field('cta_title') ?: get_field('cta_title', 'option');
-    $text = $post->field('cta_text') ?: get_field('cta_text', 'option');
-    $buttons = $post->field('cta_buttons') ?: get_field('cta_buttons', 'option');
+    $title = $p->field('cta_title') ?: get_field('cta_title', 'option');
+    $text = $p->field('cta_text') ?: get_field('cta_text', 'option');
+    $buttons = $p->field('cta_buttons') ?: get_field('cta_buttons', 'option');
     ?>
 
     <div class="bg-primary-50 md:py-15 rounded-lg px-5 py-10">

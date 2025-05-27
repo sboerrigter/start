@@ -1,6 +1,6 @@
 <?php
-$url = urlencode($post->link());
-$title = urlencode($post->title());
+$url = urlencode($p->link());
+$title = urlencode($p->title());
 
 $buttons = [
   [

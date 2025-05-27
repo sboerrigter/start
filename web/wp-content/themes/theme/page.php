@@ -1,24 +1,24 @@
 <?php
 use Theme\PostTypes\Page;
 
-$post = new Page(get_the_ID());
+$p = new Page(get_the_ID());
 ?>
 
 <?= component('head'); ?>
 <?= component('header'); ?>
-<?= component('hero', ['post' => $post]); ?>
+<?= component('hero', ['p' => $p]); ?>
 
 <main class="section">
   <div class="wrapper max-w-content">
     <h1>
-      <?= $post->title(); ?>
+      <?= $p->title(); ?>
     </h1>
 
-    <?= $post->content(); ?>
+    <?= $p->content(); ?>
   </div>
 </main>
 
-<?= component('cta', ['post' => $post]); ?>
+<?= component('cta', ['p' => $p]); ?>
 <?= component('footer'); ?>
 
 

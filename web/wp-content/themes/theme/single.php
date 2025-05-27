@@ -1,7 +1,7 @@
 <?php
 use Theme\PostTypes\Post;
 
-$post = new Post(get_the_ID());
+$p = new Post(get_the_ID());
 ?>
 
 <?= component('head'); ?>
@@ -10,24 +10,24 @@ $post = new Post(get_the_ID());
 
 <main class="section">
   <div class="wrapper max-w-content">
-    <?= component('post-image', ['post' => $post]); ?>
+    <?= component('post-image', ['p' => $p]); ?>
 
-    <h1 class="mb-2">
-      <?= $post->title(); ?>
+    <h1 class="mb-2 md:mb-3">
+      <?= $p->title(); ?>
     </h1>
 
     <?= component('post-meta', [
       'class' => 'md:mb-12',
-      'post' => $post,
+      'p' => $p,
     ]); ?>
 
-    <?= $post->content(); ?>
+    <?= $p->content(); ?>
 
-    <?= component('post-tags', ['post' => $post]); ?>
-    <?= component('share', ['post' => $post]); ?>
+    <?= component('post-tags', ['p' => $p]); ?>
+    <?= component('share', ['p' => $p]); ?>
   </div>
 </main>
 
-<?= component('related-posts', ['post' => $post]); ?>
-<?= component('cta', ['post' => $post]); ?>
+<?= component('related-posts', ['p' => $p]); ?>
+<?= component('cta', ['p' => $p]); ?>
 <?= component('footer'); ?>

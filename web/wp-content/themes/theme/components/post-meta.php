@@ -1,4 +1,4 @@
-<?php if ($meta = $post->meta(
+<?php if ($meta = $p->meta(
   $showAuthor ?? true,
   $showDate ?? true,
   $showCategories ?? true

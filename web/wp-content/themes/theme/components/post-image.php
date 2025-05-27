@@ -1,4 +1,4 @@
-<?php if ($image = $post->image()) { ?>
+<?php if ($image = $p->image()) { ?>
   <?= component('image', [
     'class' => 'rounded-lg object-cover mb-6 md:mb-12',
     'src' => $image,

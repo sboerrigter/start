@@ -57,7 +57,7 @@ trait IsPost
 
   public function image()
   {
-    return get_field('_thumbnail_id', $this->id);
+    return $this->field('_thumbnail_id');
   }
 
   public function date()

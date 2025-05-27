@@ -7,7 +7,7 @@ use Theme\PostTypes\Post;
     <?php while ( have_posts() ) { ?>
       <?php the_post(); ?>
 
-      <?= component('post', ['post' => new Post(get_the_ID())]); ?>
+      <?= component('post', ['p' => new Post(get_the_ID())]); ?>
     <?php } ?>
   </div>
 <?php } else { ?>
