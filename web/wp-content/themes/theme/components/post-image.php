@@ -1,9 +1,10 @@
 <?php if ($image = $p->image()) { ?>
   <?= component('image', [
     'class' => 'rounded-lg object-cover mb-6 md:mb-12',
+    'height' => 480,
+    'loading' => 'eager',
     'src' => $image,
     'width' => 720,
-    'height' => 480,
     'widths' => [335, 480, 600, 720],
   ]) ?>
 <?php } ?>
