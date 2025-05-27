@@ -13,9 +13,9 @@ class LatestPosts
 
   public static function init()
   {
-    static::$title = __('Latest posts', 'theme');
+    static::$title = __('Latest articles', 'theme');
     static::$description = __(
-      'Three latest posts, can be filtered by category',
+      'Three latest articles, can be filtered by category',
       'theme'
     );
 
