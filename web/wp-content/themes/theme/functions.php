@@ -17,6 +17,7 @@ Image::init();
 Media::init();
 Menu::init();
 Oembed::init();
+Performance::init();
 Security::init();
 Translation::init();
 
