@@ -43,7 +43,7 @@ class LatestPosts
           $link = Post::archiveLink();
         }
 
-        echo component('blocks/' . static::$name, [
+        echo component(static::$name, [
           'title' => get_field('title'),
           'link' => $link,
           'posts' => $posts,

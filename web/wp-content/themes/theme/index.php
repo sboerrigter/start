@@ -1,4 +1,7 @@
 <?php
+
+use Theme\PostTypes\Post;
+
 $pageId = get_option('page_for_posts');
 
 // Title
@@ -16,6 +19,14 @@ if (is_author()) {
 } else {
   $title = get_the_title($pageId);
 }
+
+// Posts
+global $wp_query;
+
+$posts = array_map(function ($post) {
+  return new Post($post->ID);
+}, $wp_query->posts);
+
 ?>
 
 <?= component('head'); ?>
@@ -25,7 +36,8 @@ if (is_author()) {
 <main class="section">
   <div class="wrapper">
     <h1><?= $title ?></h1>
-    <?= component('posts'); ?>
+    <?= component('posts', ['posts' => $posts]); ?>
+    <?= component('pagination'); ?>
   </div>
 </main>
 
