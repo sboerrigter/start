@@ -1,5 +1,6 @@
 <div class="<?= $class ?? ''; ?>">
   <a
+    aria-label="<?= $p->title(); ?>"
     class="mb-6 block aspect-[3/2] w-full overflow-hidden rounded-lg bg-gray-600 hover:bg-gray-800"
     href="<?= $p->link(); ?>"
   >
