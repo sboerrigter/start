@@ -1,3 +1,7 @@
 .editor-styles-wrapper {
-  @apply max-w-content mx-auto w-full px-5;
+  @apply overflow-x-clip bg-white;
+
+  > * {
+    @apply max-w-content mx-auto w-full px-5;
+  }
 }
