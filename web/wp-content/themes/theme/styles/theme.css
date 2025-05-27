@@ -34,6 +34,7 @@ We can't use import.meta.glob in theme.js because Tailwind utilities have to be 
 @import './components/wrapper.css';
 @import './utilities/align.css';
 @import './utilities/center.css';
+@import './utilities/full-width.css';
 
 @import 'tailwindcss/utilities.css';
 

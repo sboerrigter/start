@@ -45,7 +45,7 @@ trait IsPost
     return get_the_permalink($this->id);
   }
 
-  public function archiveLink()
+  public static function archiveLink()
   {
     return get_post_type_archive_link(static::$postType);
   }
@@ -102,15 +102,14 @@ trait IsPost
 
   public static function latest($number = 10)
   {
-    return array_map(
-      function ($id) {
-        return new self($id);
-      },
-      get_posts([
-        'fields' => 'ids',
-        'post_type' => static::$postType,
-        'posts_per_page' => $number,
-      ])
-    );
+    $ids = get_posts([
+      'fields' => 'ids',
+      'post_type' => static::$postType,
+      'posts_per_page' => $number,
+    ]);
+
+    return array_map(function ($id) {
+      return new self($id);
+    }, $ids);
   }
 }
