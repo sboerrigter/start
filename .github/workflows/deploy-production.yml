@@ -17,7 +17,7 @@ concurrency: deploy-production
 
 jobs:
   deploy-ap-production:
-    name: Deploy to start.bonsjoerd.eu
+    name: Deploy to production
     runs-on: ubuntu-latest
 
     steps:
@@ -32,5 +32,5 @@ jobs:
       - name: Deploy via deployer
         uses: deployphp/action@v1
         with:
-          dep: deploy start.bonsjoerd.eu
+          dep: deploy production
           private-key: ${{ secrets.PRIVATE_KEY_PRODUCTION }}

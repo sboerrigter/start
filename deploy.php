@@ -6,7 +6,7 @@ require 'recipe/composer.php';
 
 // General settings
 set('application', 'application');
-set('repository', 'https://github.com/sboerrigter/start.git');
+set('repository', 'git@github.com:sboerrigter/start.git');
 
 set('git_ssh_command', 'ssh');
 set('default_timeout', 3600);
@@ -14,7 +14,7 @@ set('default_timeout', 3600);
 // Defaults
 set('branch', 'main');
 set('local_url', 'http://www.start.test');
-set('deploy_path', '/var/www/vhosts/TB01-004/{{alias}}/site');
+set('deploy_path', '/var/www/vhosts/TB01-004/{{remote_user}}/site');
 set('port', 2223);
 
 set('identityFile', '~/.ssh/id_rsa');
@@ -27,17 +27,11 @@ set('shared_files', ['.env', 'auth.json', 'web/wp-content/debug.log']);
 set('shared_dirs', ['web/wp-content/uploads']);
 
 // Hosts
-host('start.bonsjoerd.eu')
+host('production')
   ->set('branch', 'main')
   ->set('hostname', 'tw-server-05.twservices.eu')
   ->set('remote_user', 'start.bonsjoerd.eu')
   ->set('remote_url', 'https://start.bonsjoerd.eu');
-
-host('hannahservices.com')
-  ->set('branch', 'hannah')
-  ->set('hostname', 'tw-server-05.twservices.eu')
-  ->set('remote_user', 'hannahservices.com')
-  ->set('remote_url', 'https://www.hannahservices.com');
 
 // Custom tasks
 
@@ -105,11 +99,11 @@ task('uploads:push', function () {
 // Purge Varnish
 task('purge:varnish', function () {
   run(
-    'curl -sX BAN -H "X-Ban-Method: exact" -H "X-Ban-Host: {{ alias }}" http://localhost/ > /dev/null'
+    'curl -sX BAN -H "X-Ban-Method: exact" -H "X-Ban-Host: {{remote_user}}" http://localhost/ > /dev/null'
   );
 });
 
 // Hooks
 after('deploy:prepare', 'deploy:build');
-// after('deploy', 'purge:varnish');
+after('deploy', 'purge:varnish');
 after('deploy:failed', 'deploy:unlock');
