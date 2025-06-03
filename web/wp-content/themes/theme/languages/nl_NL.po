@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Custom theme\n"
-"POT-Creation-Date: 2025-05-27 17:17+0200\n"
-"PO-Revision-Date: 2025-05-27 17:19+0200\n"
+"POT-Creation-Date: 2025-06-03 14:32+0200\n"
+"PO-Revision-Date: 2025-06-03 14:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -87,31 +87,31 @@ msgstr "Deel dit artikel op X"
 msgid "Share this article"
 msgstr "Deel dit artikel"
 
-#: index.php:9
+#: index.php:10
 msgid "Articles by"
 msgstr "Artikelen van"
 
-#: index.php:16
+#: index.php:17
 msgid "Articles about"
 msgstr "Artikelen over"
 
-#: src/Blocks/LatestPosts.php:16 src/Blocks/LatestPosts.php:76
+#: src/Blocks/LatestPosts.php:23 src/Blocks/LatestPosts.php:80
 msgid "Latest articles"
 msgstr "Laatste artikelen"
 
-#: src/Blocks/LatestPosts.php:18
+#: src/Blocks/LatestPosts.php:25
 msgid "Three latest articles, can be filtered by category"
 msgstr "Drie laatste artikelen, kan gefilterd worden op categorie"
 
-#: src/Blocks/LatestPosts.php:74 src/Traits/HasFields.php:57
+#: src/Blocks/LatestPosts.php:78 src/Traits/HasFields.php:58
 msgid "Title"
 msgstr "Titel"
 
-#: src/Blocks/LatestPosts.php:81
+#: src/Blocks/LatestPosts.php:85
 msgid "Category"
 msgstr "Categorie"
 
-#: src/Blocks/LatestPosts.php:83
+#: src/Blocks/LatestPosts.php:87
 msgid "Select a category to only show articles from this category."
 msgstr ""
 "Selecteer een categorie om alleen artikelen uit deze categorie weer te geven."
@@ -119,6 +119,14 @@ msgstr ""
 #: src/Editor.php:61
 msgid "Custom"
 msgstr "Custom"
+
+#: src/GeneralContent.php:24
+msgid "General content"
+msgstr "Algemene inhoud"
+
+#: src/GeneralContent.php:31
+msgid "General"
+msgstr "Algemeen"
 
 #: src/Menu.php:18
 msgid "Main menu"
@@ -128,53 +136,37 @@ msgstr "Hoofdmenu"
 msgid "Footer menu"
 msgstr "Footer menu"
 
-#: src/Plugins/Acf/GeneralContent.php:20
-msgid "General content"
-msgstr "Algemene inhoud"
-
-#: src/Plugins/Acf/GeneralContent.php:32
-msgid "General"
-msgstr "Algemeen"
-
-#: src/PostTypes/Page.php:19
+#: src/PostTypes/Page.php:25 src/PostTypes/Post.php:27
 msgid "Pages"
 msgstr "Pagina’s"
 
-#: src/PostTypes/Page.php:20
+#: src/PostTypes/Page.php:26 src/PostTypes/Post.php:28
 msgid "Page"
 msgstr "Pagina"
 
-#: src/PostTypes/Page.php:33 src/PostTypes/Post.php:35
+#: src/PostTypes/Page.php:37 src/PostTypes/Post.php:39
 msgid "settings"
 msgstr "instellingen"
 
-#: src/PostTypes/Post.php:21
-msgid "Posts"
-msgstr "Berichten"
+#: src/PostTypes/Post.php:44 src/Traits/HasFields.php:22
+msgid "Image"
+msgstr "Afbeelding"
 
-#: src/PostTypes/Post.php:22
-msgid "Post"
-msgstr "Bericht"
-
-#: src/PostTypes/Post.php:60
+#: src/PostTypes/Post.php:74
 msgid "By"
 msgstr "Door"
 
-#: src/PostTypes/Post.php:79
+#: src/PostTypes/Post.php:93
 msgid "category"
 msgstr "categorie"
 
-#: src/PostTypes/Post.php:80
+#: src/PostTypes/Post.php:94
 msgid "categories"
 msgstr "categorieën"
 
 #: src/Traits/HasFields.php:15
 msgid "Header"
 msgstr "Header"
-
-#: src/Traits/HasFields.php:22
-msgid "Image"
-msgstr "Afbeelding"
 
 #: src/Traits/HasFields.php:38
 msgid "Call to action"
@@ -188,43 +180,43 @@ msgstr "Component weergeven"
 msgid "Show \"Call to action\" component on this page"
 msgstr "“Call to action” component weergeven op deze pagina"
 
-#: src/Traits/HasFields.php:76
+#: src/Traits/HasFields.php:77
 msgid "Text"
 msgstr "Tekst"
 
-#: src/Traits/HasFields.php:122
+#: src/Traits/HasFields.php:123
 msgid "Buttons"
 msgstr "Knoppen"
 
-#: src/Traits/HasFields.php:125
+#: src/Traits/HasFields.php:126
 msgid "+ Add button"
 msgstr "+ Knop toevoegen"
 
-#: src/Traits/HasFields.php:130
+#: src/Traits/HasFields.php:131
 msgid "Button"
 msgstr "Knop"
 
-#: src/Traits/HasFields.php:137
+#: src/Traits/HasFields.php:138
 msgid "Style"
 msgstr "Stijl"
 
-#: src/Traits/HasFields.php:140
+#: src/Traits/HasFields.php:141
 msgid "Blue"
 msgstr "Blauw"
 
-#: src/Traits/HasFields.php:141
+#: src/Traits/HasFields.php:142
 msgid "Blue outline"
 msgstr "Blauw omlijnd"
 
-#: src/Traits/HasFields.php:142
+#: src/Traits/HasFields.php:143
 msgid "Gray"
 msgstr "Grijs"
 
-#: src/Traits/HasFields.php:143
+#: src/Traits/HasFields.php:144
 msgid "Gray outline"
 msgstr "Grijs omlijnd"
 
-#: src/Traits/HasFields.php:161
+#: src/Traits/HasFields.php:162
 #, php-format
 msgid "Overwrites the default value in %s settings."
 msgstr "Overschrijft de standaard waarde in %s instellingen."
@@ -252,6 +244,12 @@ msgstr "Sjoerd Boerrigter"
 #. Author URI of the plugin/theme
 msgid "https://www.bonsjoerd.eu"
 msgstr "https://www.bonsjoerd.eu"
+
+#~ msgid "Posts"
+#~ msgstr "Berichten"
+
+#~ msgid "Post"
+#~ msgstr "Bericht"
 
 #~ msgid "Latest posts"
 #~ msgstr "Laatste berichten"
