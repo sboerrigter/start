@@ -29,5 +29,4 @@ $p = new Post(get_the_ID());
 </main>
 
 <?= component('related-posts', ['p' => $p]); ?>
-<?= component('cta', ['p' => $p]); ?>
 <?= component('footer'); ?>
