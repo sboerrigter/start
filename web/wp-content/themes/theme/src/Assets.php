@@ -97,14 +97,14 @@ class Assets
     return $urls[$type];
   }
 
-  // Remove .wp-core-ui body class from admin to prevent CSS conflicts with wp-includes/dist/css/buttons.min.css
+  // Remove .wp-core-ui body class from block editor to prevent CSS conflicts with wp-includes/dist/css/buttons.min.css
   public static function removeBodyClass()
   {
-    ?>
+    if (get_current_screen()->is_block_editor) { ?>
     <script>
       const body = document.querySelector('body');
       body.classList.remove('wp-core-ui');
     </script>
-    <?php
+    <?php }
   }
 }
