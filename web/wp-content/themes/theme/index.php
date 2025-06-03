@@ -1,8 +1,9 @@
 <?php
 
+use Theme\PostTypes\Page;
 use Theme\PostTypes\Post;
 
-$pageId = get_option('page_for_posts');
+$p = new Page(get_option('page_for_posts'));
 
 // Title
 if (is_author()) {
@@ -17,7 +18,7 @@ if (is_author()) {
     $title = "{$label} &ldquo;{$term->name}&rdquo;";
   }
 } else {
-  $title = get_the_title($pageId);
+  $title = $p->title();
 }
 
 // Posts
@@ -26,12 +27,15 @@ global $wp_query;
 $posts = array_map(function ($post) {
   return new Post($post->ID);
 }, $wp_query->posts);
-
 ?>
 
 <?= component('head'); ?>
 <?= component('header'); ?>
-<?= component('hero', ['image' => get_field('_thumbnail_id', $pageId)]); ?>
+
+<?= component('hero', [
+  'title' => $title,
+  'p' => $p,
+]); ?>
 
 <main class="section">
   <div class="wrapper">
@@ -41,5 +45,5 @@ $posts = array_map(function ($post) {
   </div>
 </main>
 
-<?= component('cta'); ?>
+<?= component('cta', ['p' => $p]); ?>
 <?= component('footer'); ?>
