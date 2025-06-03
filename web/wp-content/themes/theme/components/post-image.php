@@ -1,6 +1,6 @@
 <?php if ($image = $p->image()) { ?>
   <?= component('image', [
-    'class' => 'rounded-lg object-cover mb-6 md:mb-12',
+    'class' => 'rounded-lg mb-6 md:mb-12',
     'height' => 480,
     'loading' => 'eager',
     'src' => $image,

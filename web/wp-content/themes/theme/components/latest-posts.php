@@ -15,7 +15,7 @@
 
       <?= component('posts', [
         'posts' => $posts,
-        'postClass' => 'last:sm:hidden last:lg:block',
+        'postClass' => 'nth-3:sm:hidden nth-3:lg:block',
       ]); ?>
     </div>
   </section>

@@ -18,6 +18,6 @@
   <?= $title; ?>
 
   <?= $iconAfter ?? component('svg/chevron-right', [
-    'class' => 'transition-transform group-hover:translate-x-1',
+    'class' => 'transition-transform group-hover:translate-x-1 -mr-1',
   ]); ?>
 </a>

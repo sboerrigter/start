@@ -2,7 +2,7 @@
   <?php if (isset($p) && $image = $p->image()) { ?>
     <?= component('image', [
       'class' => implode(' ', [
-        'rounded-lg object-cover',
+        'rounded-lg',
         is_front_page() ? 'max-h-[600px]' : 'max-h-[400px]',
       ]),
       'height' => 900,
