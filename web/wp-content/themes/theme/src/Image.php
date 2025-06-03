@@ -55,7 +55,7 @@ class Image
     }
 
     // Set image properties
-    $this->class = implode(' ', [$args['class'], 'object-cover bg-gray-600']);
+    $this->class = $args['class'] ?? '';
     $this->fit = $args['fit'] ?? 'crop';
     $this->height = $args['height'];
     $this->loading = $args['loading'] ?? 'lazy';
