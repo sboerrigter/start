@@ -1,7 +1,8 @@
 <?php
-namespace Theme\Plugins\Acf;
+namespace Theme;
 
 use Theme\Traits\HasFields;
+use VarnishPurger;
 
 class GeneralContent
 {
@@ -13,6 +14,7 @@ class GeneralContent
   {
     add_action('acf/init', [static::class, 'addOptionsPage']);
     add_action('acf/init', [static::class, 'registerFields']);
+    add_action('acf/save_post', [static::class, 'purgeOnSave']);
   }
 
   public static function title()
@@ -54,5 +56,16 @@ class GeneralContent
         ],
       ],
     ]);
+  }
+
+  // Purge varnish cache when site settings are saved
+  public static function purgeOnSave()
+  {
+    $screen = get_current_screen();
+
+    if ($screen->id == 'toplevel_page_' . static::$name) {
+      $all = home_url() . '/?vhp-regex';
+      VarnishPurger::purge_url($all);
+    }
   }
 }
