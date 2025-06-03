@@ -17,12 +17,16 @@ class Post
 
   public static function init()
   {
-    static::$labels = [
-      'name' => __('Posts', 'theme'),
-      'singular_name' => __('Post', 'theme'),
-    ];
-
+    add_action('acf/init', [static::class, 'setProperties']);
     add_action('acf/init', [static::class, 'registerFields']);
+  }
+
+  public static function SetProperties()
+  {
+    static::$labels = [
+      'name' => __('Pages', 'theme'),
+      'singular_name' => __('Page', 'theme'),
+    ];
   }
 
   public static function registerFields()

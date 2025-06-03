@@ -9,22 +9,19 @@ class GeneralContent
   use HasFields;
 
   public static $name = 'general-content';
+  public static $title;
 
   public static function init()
   {
+    add_action('acf/init', [static::class, 'setProperties']);
     add_action('acf/init', [static::class, 'addOptionsPage']);
     add_action('acf/init', [static::class, 'registerFields']);
     add_action('acf/save_post', [static::class, 'purgeOnSave']);
   }
 
-  public static function title()
+  public static function setProperties()
   {
-    return __('General content', 'theme');
-  }
-
-  public static function adminUrl()
-  {
-    return esc_url(admin_url('admin.php?page=' . static::$name));
+    static::$title = __('General content', 'theme');
   }
 
   public static function addOptionsPage()
@@ -32,7 +29,7 @@ class GeneralContent
     acf_add_options_page([
       'menu_slug' => static::$name,
       'menu_title' => __('General', 'theme'),
-      'page_title' => static::title(),
+      'page_title' => static::$title,
       'icon_url' => 'dashicons-welcome-widgets-menus',
     ]);
   }
@@ -43,7 +40,7 @@ class GeneralContent
 
     acf_add_local_field_group([
       'key' => static::$name,
-      'title' => static::title(),
+      'title' => static::$title,
       'fields' => array_merge(static::ctaFields($key, true)),
       'instruction_placement' => 'field',
       'location' => [

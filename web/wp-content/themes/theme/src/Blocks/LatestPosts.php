@@ -13,14 +13,18 @@ class LatestPosts
 
   public static function init()
   {
+    add_action('acf/init', [static::class, 'SetProperties']);
+    add_action('acf/init', [static::class, 'register']);
+    add_action('acf/init', [static::class, 'registerFields']);
+  }
+
+  public static function SetProperties()
+  {
     static::$title = __('Latest articles', 'theme');
     static::$description = __(
       'Three latest articles, can be filtered by category',
       'theme'
     );
-
-    add_action('acf/init', [static::class, 'register']);
-    add_action('acf/init', [static::class, 'registerFields']);
   }
 
   public static function register()

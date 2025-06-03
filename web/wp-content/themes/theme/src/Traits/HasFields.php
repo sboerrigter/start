@@ -155,12 +155,12 @@ trait HasFields
 
   private static function defaultInstructions()
   {
-    $url = GeneralContent::adminUrl();
-    $title = GeneralContent::title();
+    $title = GeneralContent::$title;
+    $adminUrl = esc_url(admin_url('admin.php?page=' . GeneralContent::$name));
 
     return sprintf(
       __('Overwrites the default value in %s settings.', 'theme'),
-      "<a href='{$url}' target='_blank'>{$title}</a>"
+      "<a href='{$adminUrl}' target='_blank'>{$title}</a>"
     );
   }
 }

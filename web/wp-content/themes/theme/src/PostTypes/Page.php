@@ -15,12 +15,16 @@ class Page
 
   public static function init()
   {
+    add_action('acf/init', [static::class, 'setProperties']);
+    add_action('acf/init', [static::class, 'registerFields']);
+  }
+
+  public static function SetProperties()
+  {
     static::$labels = [
       'name' => __('Pages', 'theme'),
       'singular_name' => __('Page', 'theme'),
     ];
-
-    add_action('acf/init', [static::class, 'registerFields']);
   }
 
   public static function registerFields()

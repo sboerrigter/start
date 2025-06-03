@@ -15,8 +15,8 @@ class Menu
   // Register menu's
   public static function register()
   {
-    register_nav_menu('main', __('Main menu'));
-    register_nav_menu('footer', __('Footer menu'));
+    register_nav_menu('main', __('Main menu', 'theme'));
+    register_nav_menu('footer', __('Footer menu', 'theme'));
   }
 
   // Set current URL so we can determine the current and parent menu pages
