@@ -7,6 +7,11 @@ class User
   private $id;
   private $wpUser;
 
+  public static function init()
+  {
+    add_action('after_setup_theme', [static::class, 'modifyCapabilities']);
+  }
+
   public function __construct($id)
   {
     $this->id = $id;
@@ -26,5 +31,16 @@ class User
   public function link()
   {
     return get_author_posts_url($this->id);
+  }
+
+  // Modify editor capabilities
+  public static function modifyCapabilities()
+  {
+    $editor = get_role('editor');
+
+    // Allow editors to edit theme options like menu's
+    if ($editor && !$editor->has_cap('edit_theme_options')) {
+      $editor->add_cap('edit_theme_options');
+    }
   }
 }
