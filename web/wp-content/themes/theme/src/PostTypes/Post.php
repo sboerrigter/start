@@ -33,7 +33,17 @@ class Post
       'key' => "{$key}_settings",
       'title' =>
         static::$labels['singular_name'] . ' ' . __('settings', 'theme'),
-      'fields' => array_merge(static::headerFields($key)),
+      'fields' => [
+        [
+          'key' => "field_{$key}_thumbnail",
+          'name' => '_thumbnail_id',
+          'label' => __('Image', 'theme'),
+          'type' => 'image',
+          'return_format' => 'id',
+          'min_width' => 1200,
+          'min_height' => 900,
+        ],
+      ],
       'instruction_placement' => 'field',
       'location' => [
         [

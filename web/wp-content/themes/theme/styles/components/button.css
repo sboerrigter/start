@@ -1,24 +1,23 @@
-@utility button {
+.button,
+.wp-block-button .wp-block-button__link {
   @apply inline-flex gap-1 rounded border-2 px-4 py-2;
   @apply cursor-pointer font-semibold no-underline;
   @apply border-primary-600 bg-primary-600 text-white;
   @apply hover:border-primary-800 hover:bg-primary-800 hover:text-white;
 }
 
-@utility button-outline {
-  @apply button;
+.button-outline,
+.wp-block-button.is-style-outline .wp-block-button__link {
   @apply border-primary-600 text-primary-600 bg-transparent;
   @apply hover:border-primary-800 hover:bg-primary-800 hover:text-white;
 }
 
-@utility button-gray {
-  @apply button;
+.button-gray {
   @apply border-gray-600 bg-gray-600 text-white;
   @apply hover:border-gray-800 hover:bg-gray-800;
 }
 
-@utility button-gray-outline {
-  @apply button;
+.button-gray-outline {
   @apply border-gray-600 bg-transparent text-gray-600;
   @apply hover:border-gray-800 hover:bg-gray-800;
 }

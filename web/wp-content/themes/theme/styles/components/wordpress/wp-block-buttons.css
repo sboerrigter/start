@@ -2,13 +2,3 @@
   @apply gap-3;
   @apply my-9;
 }
-
-.wp-block-button {
-  .wp-block-button__link {
-    @apply button;
-  }
-
-  &.is-style-outline .wp-block-button__link {
-    @apply button-outline;
-  }
-}

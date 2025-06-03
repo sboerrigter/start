@@ -2,7 +2,7 @@
 
 namespace Theme\Traits;
 
-use Theme\Plugins\Acf\GeneralContent;
+use Theme\GeneralContent;
 
 trait HasFields
 {
@@ -49,6 +49,7 @@ trait HasFields
               'theme'
             ),
             'type' => 'true_false',
+            'default_value' => true,
           ]
           : null,
         [
