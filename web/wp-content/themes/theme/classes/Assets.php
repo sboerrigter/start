@@ -14,7 +14,6 @@ class Assets
     add_filter('script_loader_tag', [static::class, 'scriptLoader'], 10, 3);
     add_action('after_setup_theme', [static::class, 'editorStyles']);
     add_action('enqueue_block_editor_assets', [static::class, 'editorScripts']);
-    add_action('enqueue_block_editor_assets', [static::class, 'editorScripts']);
     add_action('admin_footer', [static::class, 'removeBodyClass']);
   }
 

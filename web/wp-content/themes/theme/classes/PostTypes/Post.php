@@ -24,8 +24,8 @@ class Post
   public static function SetProperties()
   {
     static::$labels = [
-      'name' => __('Pages', 'theme'),
-      'singular_name' => __('Page', 'theme'),
+      'name' => __('Posts', 'theme'),
+      'singular_name' => __('Post', 'theme'),
     ];
   }
 

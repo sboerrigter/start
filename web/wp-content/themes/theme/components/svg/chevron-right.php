@@ -1,6 +1,7 @@
 <svg
   class="<?= $class ?? ''; ?> flex-none"
   fill="none"
+  height="20"
   stroke-width="2"
   stroke="currentColor"
   viewBox="0 0 20 20"

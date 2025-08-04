@@ -10,7 +10,10 @@ class Media
   {
     add_action('after_setup_theme', [static::class, 'imageSizes']);
     add_action('after_setup_theme', [static::class, 'imageDefaultLinkType']);
-    add_filter('wp_get_attachment_image_src', [static::class, 'productionSrc']);
+    add_filter('wp_get_attachment_image_src', [
+      static::class,
+      'productionImages',
+    ]);
     add_filter('template_redirect', [static::class, 'redirect']);
     add_filter('redirect_canonical', [static::class, 'canonical'], 0, 1);
     add_filter('attachment_link', [static::class, 'disableLink'], 10, 2);
@@ -35,7 +38,7 @@ class Media
   }
 
   // Get images from production if they don't exist locally
-  public static function productionSrc($src)
+  public static function productionImages($src)
   {
     // Bail if this is the production environment
     if (WP_ENV == 'production') {

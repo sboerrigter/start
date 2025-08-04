@@ -1,5 +1,5 @@
 <svg
-  class="<?= $class ?? ''; ?> flex-none"
+  class="flex-none"
   fill-rule="evenodd"
   fill="none"
   height="24"
@@ -14,6 +14,14 @@
     stroke-linejoin="round"
   />
   <path d="m8 9c0 1.3333333.83333333 2.8333333 2.5 4.5 1.6666667 1.6666667 3.1666667 2.5 4.5 2.5" />
-  <circle cx="9" cy="9" r="1" />
-  <circle cx="15" cy="15" r="1" />
+  <circle
+    cx="9"
+    cy="9"
+    r="1"
+  />
+  <circle
+    cx="15"
+    cy="15"
+    r="1"
+  />
 </svg>

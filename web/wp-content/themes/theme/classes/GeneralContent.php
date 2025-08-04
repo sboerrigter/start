@@ -55,7 +55,7 @@ class GeneralContent
     ]);
   }
 
-  // Purge varnish cache when site settings are saved
+  // Purge varnish cache when general content is saved
   public static function purgeOnSave()
   {
     $screen = get_current_screen();

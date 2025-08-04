@@ -48,7 +48,7 @@ final class Admin
 
       'separator3',
 
-      'themes.php', // Appaerance
+      'themes.php', // Appearance
       'plugins.php', // Plugins
       'users.php', // Users
       'profile.php', // Profile
