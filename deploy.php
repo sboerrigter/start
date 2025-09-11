@@ -96,6 +96,11 @@ task('uploads:push', function () {
   );
 });
 
+// Purge opCache
+task('purge:opcache', function () {
+  run('php-fpm-cli -r "opcache_reset();"');
+});
+
 // Purge Varnish
 task('purge:varnish', function () {
   run(
@@ -105,5 +110,6 @@ task('purge:varnish', function () {
 
 // Hooks
 after('deploy:prepare', 'deploy:build');
+after('deploy', 'purge:opcache');
 after('deploy', 'purge:varnish');
 after('deploy:failed', 'deploy:unlock');
