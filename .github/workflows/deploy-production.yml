@@ -16,7 +16,7 @@ on:
 concurrency: deploy-production
 
 jobs:
-  deploy-ap-production:
+  deploy-production:
     name: Deploy to production
     runs-on: ubuntu-latest
 
