@@ -12,21 +12,17 @@ class Post
   use IsPost;
   use HasFields;
 
-  static $postType = 'post';
-  static $labels;
+  public static $postType = 'post';
+  public static $labels;
 
   public static function init()
-  {
-    add_action('acf/init', [static::class, 'setProperties']);
-    add_action('acf/init', [static::class, 'registerFields']);
-  }
-
-  public static function SetProperties()
   {
     static::$labels = [
       'name' => __('Posts', 'theme'),
       'singular_name' => __('Post', 'theme'),
     ];
+
+    add_action('acf/init', [static::class, 'registerFields']);
   }
 
   public static function registerFields()
@@ -90,8 +86,8 @@ class Post
     if ($showCategories && ($categories = $this->categories())) {
       $label =
         count($categories) == 1
-          ? __('category', 'theme')
-          : __('categories', 'theme');
+        ? __('category', 'theme')
+        : __('categories', 'theme');
 
       $categories = array_map(function ($term) {
         $class =
