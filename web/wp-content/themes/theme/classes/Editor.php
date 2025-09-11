@@ -35,12 +35,7 @@ class Editor
 
   public static function init()
   {
-    add_filter(
-      'allowed_block_types_all',
-      [static::class, 'setAllowedBlockTypes'],
-      10,
-      2
-    );
+    add_filter('allowed_block_types_all', [static::class, 'setAllowedBlockTypes'], 10, 2);
     add_filter('block_categories_all', [static::class, 'setBlockCategories']);
   }
 
@@ -50,7 +45,7 @@ class Editor
     return static::$allowedBlockTypes;
   }
 
-  // Set allowed block types
+  // Set block categories
   public static function setBlockCategories($categories)
   {
     $text = $categories[0];
