@@ -40,12 +40,9 @@ class Image
     }
 
     // Set URL and alt attributes if an image ID is passed to $args['src']
-    if (
-      is_int($args['src']) &&
-      ($url = wp_get_attachment_image_url($args['src'], 'full'))
-    ) {
+    if (is_int($args['src']) || !filter_var($args['src'], FILTER_VALIDATE_URL)) {
       $this->id = $args['src'];
-      $this->url = $url;
+      $this->url = wp_get_attachment_image_url($args['src'], 'full');
 
       $alt = get_post_meta($this->id, '_wp_attachment_image_alt', true);
       $this->alt = $args['alt'] ?? $alt;

@@ -4,7 +4,7 @@ namespace Theme;
 
 class Assets
 {
-  static $scriptPath = 'web/wp-content/themes/theme/scripts/theme.js';
+  static $scriptPath = 'web/wp-content/themes/folkinity/scripts/theme.js';
   static $fontUrl = 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap';
 
   public static function init()
@@ -21,8 +21,15 @@ class Assets
   public static function preconnect()
   {
     ?>
-      <link rel='preconnect' href='https://fonts.googleapis.com'>
-      <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link
+      rel='preconnect'
+      href='https://fonts.googleapis.com'
+    >
+    <link
+      rel='preconnect'
+      href='https://fonts.gstatic.com'
+      crossorigin
+    >
     <?php
   }
 
@@ -40,8 +47,8 @@ class Assets
         'http://localhost:5173/' . static::$scriptPath
       );
     } else {
-      wp_enqueue_script('theme', static::compiled('js'));
-      wp_enqueue_style('theme', static::compiled('css'));
+      wp_enqueue_script('theme', get_theme_file_uri(static::compiled('js')));
+      wp_enqueue_style('theme', get_theme_file_uri(static::compiled('css')));
     }
 
     // Pass PHP variables to JavaScript
@@ -89,8 +96,8 @@ class Assets
     $data = $manifest[static::$scriptPath];
 
     $urls = [
-      'js' => get_theme_file_uri("dist/{$data['file']}"),
-      'css' => get_theme_file_uri("dist/{$data['css'][0]}"),
+      'js' => "dist/{$data['file']}",
+      'css' => "dist/{$data['css'][0]}",
     ];
 
     return $urls[$type];
@@ -100,10 +107,10 @@ class Assets
   public static function removeBodyClass()
   {
     if (get_current_screen()->is_block_editor) { ?>
-    <script>
-      const body = document.querySelector('body');
-      body.classList.remove('wp-core-ui');
-    </script>
+      <script>
+        const body = document.querySelector('body');
+        body.classList.remove('wp-core-ui');
+      </script>
     <?php }
   }
 }
