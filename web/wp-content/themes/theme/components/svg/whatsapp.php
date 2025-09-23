@@ -1,5 +1,5 @@
 <svg
-  class="flex-none"
+  class="<?= $class ?? ''; ?> flex-none"
   fill-rule="evenodd"
   fill="none"
   height="24"

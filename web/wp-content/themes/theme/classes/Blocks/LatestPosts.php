@@ -13,26 +13,19 @@ class LatestPosts
 
   public static function init()
   {
-    add_action('acf/init', [static::class, 'SetProperties']);
     add_action('acf/init', [static::class, 'register']);
     add_action('acf/init', [static::class, 'registerFields']);
-  }
-
-  public static function SetProperties()
-  {
-    static::$title = __('Latest articles', 'theme');
-    static::$description = __(
-      'Three latest articles, can be filtered by category',
-      'theme'
-    );
   }
 
   public static function register()
   {
     acf_register_block_type([
       'name' => static::$name,
-      'title' => static::$title,
-      'description' => static::$description,
+      'title' => __('Latest articles', 'theme'),
+      'description' => __(
+        'Three latest articles, can be filtered by category',
+        'theme'
+      ),
       'category' => 'custom',
       'icon' => 'admin-post',
       'mode' => 'auto',

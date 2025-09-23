@@ -12,10 +12,10 @@ if ($status !== 200) {
 }
 ?>
 
-<div class="aspect-video w-full overflow-hidden rounded bg-gray-600">
+<div class="w-full aspect-video overflow-hidden rounded-md shadow-md bg-gray-600 mb-6 group relative">
   <button
     aria-label="Play YouTube video"
-    class="youtube group relative cursor-pointer"
+    class="youtube absolute top-0 left-0 w-full h-full group cursor-pointer"
     data-youtube-id="<?= $youtubeId ?>"
   >
     <div
@@ -34,6 +34,10 @@ if ($status !== 200) {
     </div>
 
     <img
+      class="
+        absolute left-0 top-0 w-full h-full object-cover
+        group-hover:scale-110 transition-transform ease-out duration-300
+      "
       src="<?= $image ?>"
       width="720"
       height="<?= round((720 / 16) * 9) ?>"
