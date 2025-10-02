@@ -7,6 +7,7 @@ $image = new Image($args);
 <img
   alt="<?= $image->alt; ?>"
   class="<?= $image->class; ?> object-cover bg-gray-600"
+  fetchpriority="<?= ($image->loading == 'eager') ? 'high' : 'low'; ?>"
   height="<?= $image->height; ?>"
   loading="<?= $image->loading; ?>"
   sizes="<?= $image->sizes; ?>"

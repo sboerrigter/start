@@ -16,6 +16,7 @@ Editor::init();
 Excerpt::init();
 GeneralContent::init();
 Image::init();
+Mail::init();
 Media::init();
 Menu::init();
 Oembed::init();

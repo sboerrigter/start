@@ -67,6 +67,7 @@ Config::define('SCRIPT_DEBUG', env('SCRIPT_DEBUG') ?? false);
 ini_set('display_errors', '0');
 
 // Theme
+Config::define('DEV_MAIL_TO', env('DEV_MAIL_TO'));
 Config::define('PRODUCTION_URL', env('PRODUCTION_URL'));
 
 // WP Mail SMTP

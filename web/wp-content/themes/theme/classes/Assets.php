@@ -36,7 +36,7 @@ class Assets
   // Enqueue scripts and styles
   public static function enqueue()
   {
-    // Euque custom font
+    // Euqueue custom font
     wp_enqueue_style('font', static::$fontUrl);
 
     // Enqueue scripts and styles from vite development server or compiled

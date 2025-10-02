@@ -15,6 +15,7 @@ final class Admin
     add_action('admin_head', [static::class, 'adminNotices']);
     add_action('wp_dashboard_setup', [static::class, 'dashboardWidgets']);
     add_filter('dashboard_glance_items', [static::class, 'setGlanceItems']);
+    add_filter('manage_posts_columns', [static::class, 'managePostsColumns']);
   }
 
   // Add and remove admin menu items
@@ -116,5 +117,15 @@ final class Admin
     }
 
     return $items;
+  }
+
+  // Remove some columns from admin posts lists
+  public static function managePostsColumns($columns)
+  {
+    unset($columns['author']);
+    unset($columns['comments']);
+    unset($columns['date']);
+
+    return $columns;
   }
 }

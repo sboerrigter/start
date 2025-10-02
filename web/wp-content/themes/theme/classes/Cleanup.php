@@ -18,7 +18,6 @@ class Cleanup
     remove_action('wp_head', 'wp_oembed_add_host_js');
     remove_action('wp_head', 'wp_resource_hints', 2);
     remove_action('wp_head', 'wp_shortlink_wp_head', 10);
-    remove_action('wp_head', 'wp_site_icon', 99);
 
     // Remove stuff from HTML headers
     remove_action('template_redirect', 'wp_shortlink_header', 11);
