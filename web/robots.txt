@@ -5,6 +5,5 @@ Disallow: /wp/wp-includes/
 Disallow: /wp/wp-login.php
 Disallow: /wp/readme.html
 Disallow: /trackback/
-Disallow: /*?*
 
 Sitemap: /sitemap_index.xml
