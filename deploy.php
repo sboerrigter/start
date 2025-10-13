@@ -8,20 +8,14 @@ require 'recipe/composer.php';
 set('application', 'application');
 set('repository', 'git@github.com:sboerrigter/start.git');
 
-set('git_ssh_command', 'ssh');
 set('default_timeout', 3600);
+set('use_atomic_symlink', false);
 
 // Defaults
 set('branch', 'main');
 set('local_url', 'http://www.start.test');
 set('deploy_path', '/var/www/vhosts/TB01-004/{{remote_user}}/site');
 set('port', 2223);
-
-set('identityFile', '~/.ssh/id_rsa');
-set('addSshOption', 'UserKnownHostsFile', '/dev/null');
-set('addSshOption', 'StrictHostKeyChecking', 'no');
-set('addSshOption', 'HostBasedAuthentication', 'no');
-set('use_atomic_symlink', false);
 
 set('shared_files', ['.env', 'auth.json', 'web/wp-content/debug.log']);
 set('shared_dirs', ['web/wp-content/uploads']);
