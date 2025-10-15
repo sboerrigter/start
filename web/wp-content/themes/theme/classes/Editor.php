@@ -25,6 +25,7 @@ class Editor
     'core/columns',
     'core/separator',
     'core/spacer',
+    'core/html',
 
     // Custom
     'acf/latest-posts',
