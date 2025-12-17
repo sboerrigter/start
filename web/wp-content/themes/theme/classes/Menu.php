@@ -5,7 +5,7 @@ namespace Theme;
 class Menu
 {
   private $menu;
-  private static $currentUrl;
+  private static $currentUrl = '';
 
   public static function init()
   {
@@ -45,7 +45,8 @@ class Menu
   public static function setCurrentUrl()
   {
     global $wp;
-    static::$currentUrl = trailingslashit(home_url($wp->request));
+    $request = $wp->request ?? '';
+    static::$currentUrl = trailingslashit(home_url($request));
   }
 
   // Get menu title
@@ -57,7 +58,17 @@ class Menu
   // Get menu items
   public function items()
   {
-    $items = wp_get_nav_menu_items($this->menu->name);
+    if (!$this->menu) {
+      return [];
+    }
+
+    $menuIdentifier = $this->menu->term_id ?? $this->menu->name ?? null;
+
+    if (!$menuIdentifier) {
+      return [];
+    }
+
+    $items = wp_get_nav_menu_items($menuIdentifier);
 
     // Return empty array if menu is empty
     if (!$items || count($items) == 0) {
@@ -80,9 +91,8 @@ class Menu
       if ($item->menu_item_parent == $parentId) {
         $children = $this->buildTree($items, $item->ID);
 
-        if ($children) {
-          $item->children = $children;
-        }
+        // Ensure children always exists to avoid undefined property notices
+        $item->children = $children ?: [];
 
         $output[$item->ID] = $item;
         unset($item);
@@ -112,13 +122,14 @@ class Menu
 
     return array_map(function ($item) {
       $urls = [];
+      $children = $item->children ?? [];
 
-      if ($item->children) {
+      if ($children) {
         $urls = array_merge($urls, $this->getSubitemUrls($item));
       }
 
-      $item->isParent = $item->children && in_array(static::$currentUrl, $urls);
-      $item->children = $this->addIsParent($item->children);
+      $item->isParent = $children && in_array(static::$currentUrl, $urls);
+      $item->children = $this->addIsParent($children);
 
       return $item;
     }, $items);
@@ -127,11 +138,12 @@ class Menu
   private function getSubitemUrls($item)
   {
     $urls = [];
+    $children = $item->children ?? [];
 
-    foreach ($item->children as $subitem) {
+    foreach ($children as $subitem) {
       $urls[] = $subitem->url;
 
-      if ($subitem->children) {
+      if (!empty($subitem->children)) {
         $urls = array_merge($urls, $this->getSubitemUrls($subitem));
       }
     }
