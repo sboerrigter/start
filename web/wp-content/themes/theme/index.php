@@ -1,4 +1,7 @@
 <?php
+if (!defined('ABSPATH')) {
+  exit;
+}
 
 use Theme\PostTypes\Page;
 use Theme\PostTypes\Post;
